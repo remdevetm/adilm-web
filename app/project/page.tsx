@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function ProjectPage() {
   return (
-    <div className="service-page inner-page project-page">
+    <div className="service-page inner-page project-page adilm-ci">
       <div className="body_wrap o-clip">
         <Header />
 

@@ -40,9 +40,9 @@ export default function ServiceSection() {
       link: "/service-details",
     },
     {
-      title: "Data and intelligence..",
+      title: "AI Tutor & Simulation Coach",
       content:
-        "We turn complex data into clear, actionable insights using AI and advanced analytics—empowering smarter decisions.",
+        "An AI tutor that teaches any subject and runs simulations for customer service, interviews, and tertiary learning. It practices dialogues, gives step-by-step coaching, and builds confidence through feedback.",
       images: [img08, img08, img08, img08],
       link: "/service-details",
     },

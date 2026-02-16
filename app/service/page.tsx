@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function ServicePage() {
   return (
-    <div className="about-page inner-page">
+    <div className="about-page inner-page adilm-ci">
       <div className="body_wrap o-clip">
         <Header />
 

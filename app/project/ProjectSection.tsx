@@ -36,37 +36,37 @@ const ArrowIcon = () => (
 // PROJECT DATA
 const projectData = [
   {
-    title: "Chatbot and NLP agents..",
+    title: "Autonomous Customer Service Agent..",
     content:
-      "We build smart chatbots and NLP tools that understand and respond naturally. From customer support to document analysis, our AI solutions automate communication, save time, and improve user experience.",
+      "An end-to-end support agent that chats with customers, logs tickets into the helpdesk, checks billing, reminds users to update payments, verifies receipts, and reinstates accounts automatically once cleared.",
     images: [img02, img02, img02, img02],
     reverse: false,
   },
   {
-    title: "General AI agents..",
+    title: "Co-pilot for Humans..",
     content:
-      "We deliver AI solutions that streamline operations, boost efficiency, and enable smarter decisions.",
+      "A real-time co‑pilot that listens to support calls and suggests next questions, product recommendations, appointment scheduling, and clear explanations. After the call, it runs QA and highlights improvements.",
     images: [img03, img03, img03, img03],
     reverse: true,
   },
   {
-    title: "Computer vision agents..",
+    title: "AI Agents for Auditors..",
     content:
-      "We develop AI systems that see and understand visual data—detecting objects, recognizing patterns, and automating inspections.",
+      "AI agents for auditors that ingest semi‑structured and structured data, trace anomalies, generate evidence trails, and auto‑populate audit templates. They summarize risk areas and support deep, repeatable reviews.",
     images: [img04, img04, img04, img04],
     reverse: false,
   },
   {
-    title: "E-commerce and marketing agents..",
+    title: "Proposal Writing Agent..",
     content:
-      "We create AI solutions that boost sales and customer engagement with recommendations and dynamic pricing.",
+      "A proposal-writing agent that turns sales conversations into polished, tailored proposals. It maps customer needs to your catalog, drafts scope and pricing language, and outputs ready-to-send documents fast.",
     images: [img05, img05, img05, img05],
     reverse: true,
   },
   {
-    title: "Data analytics agents..",
+    title: "AI Tutor & Simulation Coach..",
     content:
-      "We turn complex data into clear, actionable insights through predictive models and real-time dashboards.",
+      "An AI tutor that teaches any subject and runs simulations for customer service, interviews, and tertiary learning. It practices dialogues, gives step-by-step coaching, and builds confidence through feedback.",
     images: [img06, img06, img06, img06],
     reverse: false,
   },

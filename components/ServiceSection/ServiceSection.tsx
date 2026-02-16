@@ -34,8 +34,8 @@ const services: ServiceItem[] = [
   },
   {
     id: 2,
-    title: "Data Science",
-    desc: "We turn complex data into clear, actionable insights using AI and analytics—empowering smarter decisions.",
+    title: "AI Tutor & Simulation Coach",
+    desc: "An AI tutor that teaches any subject and runs simulations for customer service, interviews, and tertiary learning. It practices dialogues, gives step-by-step coaching, and builds confidence through feedback.",
     img: img02,
     link: "/service-details",
   },

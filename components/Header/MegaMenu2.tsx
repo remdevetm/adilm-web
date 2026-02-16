@@ -175,10 +175,10 @@ export default function MegaMenuServices() {
 
                       <div className="xb-item--holder">
                         <h3 className="xb-item--title">
-                          General AI agents..
+                          Co-pilot for Humans..
                         </h3>
                         <p className="xb-item--text">
-                          We deliver AI solutions that streamline operations and boost efficiency.
+                          A real-time co‑pilot that listens to support calls and suggests next questions, product recommendations, appointment scheduling, and clear explanations. After the call, it runs QA and highlights improvements.
                         </p>
 
                         <Link
