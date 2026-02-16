@@ -34,17 +34,17 @@ const menus: MenuItem[] = [
     link: "#",
     submenu: [
       { id: 31, title: "Services", link: "/service" },
-      { id: 32, title: "Service Details", link: "/service-details" },
+      { id: 32, title: "Rag as a Service", link: "/service-details" },
       { id: 33, title: "Career", link: "/career" },
       { id: 34, title: "Career Details", link: "/career-details" },
-      { id: 35, title: "Projects", link: "/project" },
-      { id: 36, title: "Project Details", link: "/project-details" },
+      { id: 35, title: "Our AI agents", link: "/project" },
+      { id: 36, title: "AI Agent Details", link: "/project-details" },
       { id: 37, title: "Team", link: "/team" },
     ],
   },
   {
     id: 4,
-    title: "Services",
+    title: "Rag as a Service",
     link: "#",
     submenu: [
       { id: 41, title: "AI SaaS Product", link: "/service-details" },

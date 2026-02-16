@@ -81,7 +81,7 @@ export default function Footer() {
             { label: "What we do?", title: "Services", href: "/service" },
             { label: "Who we are?", title: "About us", href: "/about" },
             { label: "How we deliver", title: "Contact us", href: "/contact" },
-            { label: "What we're good at?", title: "Our project", href: "/project" },
+            { label: "What we're good at?", title: "Our AI agents", href: "/project" },
             { label: "News?", title: "News", href: "/blog" },
           ].map((item, i) => (
             <div className="xb-footer-nav-item" key={i}>

@@ -5,19 +5,23 @@ import Footer from "@/components/footer/Footer";
 import ProjectSection from "./ProjectSection";
 
 export const metadata = {
-  title: "Our Projects | Aivora – AI Agency & Technology",
+  title: "Our AI agents | Aivora – AI Agency & Technology",
   description:
-    "Explore Aivora's featured AI, automation, and machine learning projects showcasing innovation and real business impact.",
+    "Explore Aivora's AI agents across chatbot, NLP, vision, marketing, and analytics—built to deliver real business impact.",
 };
 
 export default function ProjectPage() {
   return (
-    <div className="service-page inner-page">
+    <div className="service-page inner-page project-page">
       <div className="body_wrap o-clip">
         <Header />
 
         <main>
-          <PageTitle pageTitle="Our Projects" pagesub="Our Projects" />
+          <PageTitle
+            pageTitle="Our AI agents"
+            pagesub="Our AI agents"
+            disableBgImage
+          />
           <ProjectSection />
         </main>
 

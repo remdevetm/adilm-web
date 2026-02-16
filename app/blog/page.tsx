@@ -12,12 +12,12 @@ export const metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="about-page inner-page">
+    <div className="about-page inner-page blog-page">
       <div className="body_wrap o-clip">
         <Header />
 
         <main>
-          <PageTitle pageTitle="Blog" pagesub="Blog" />
+          <PageTitle pageTitle="Blog" pagesub="Blog" disableBgImage />
           <BlogList />
         </main>
 

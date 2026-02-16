@@ -43,14 +43,14 @@ export default function MegaMenu1() {
                         <Link className="iconbox_block_2" href="/service-details">
                           <span className="icon_title_wrap">
                             <small className="iconbox_icon">
-                              <Image src={icon1} alt="Service Details Icon" />
+                              <Image src={icon1} alt="Rag as a Service Icon" />
                             </small>
                             <small className="iconbox_title">
-                              Service details
+                              Rag as a Service
                             </small>
                           </span>
                           <span className="description mb-0">
-                            Happy to help you!
+                            Production-ready RAG for your data.
                           </span>
                         </Link>
                       </div>
@@ -90,9 +90,9 @@ export default function MegaMenu1() {
                         <Link className="iconbox_block_2" href="/project">
                           <span className="icon_title_wrap">
                             <span className="iconbox_icon">
-                              <Image src={icon3} alt="Project Icon" />
+                              <Image src={icon3} alt="AI Agents Icon" />
                             </span>
-                            <small className="iconbox_title">Project</small>
+                            <small className="iconbox_title">Our AI agents</small>
                           </span>
                           <span className="description mb-0">
                             Explore our all case studies.
@@ -104,10 +104,10 @@ export default function MegaMenu1() {
                         <Link className="iconbox_block_2" href="/project-details">
                           <span className="icon_title_wrap">
                             <span className="iconbox_icon">
-                              <Image src={icon3} alt="Project Details Icon" />
+                              <Image src={icon3} alt="AI Agent Details Icon" />
                             </span>
                             <small className="iconbox_title">
-                              Project details
+                              AI Agent Details
                             </small>
                           </span>
                           <span className="description mb-0">

@@ -125,7 +125,7 @@ export default function ProjectSection() {
     <section className="project bg_img pt-135 pb-150">
       <div className="container">
         <div className="sec-title custom-sec-title xb-sec-padding text-center">
-          <span className="sub-title">Our Projects</span>
+          <span className="sub-title">Our AI agents</span>
 
           <h2 className="title">
             <span className="round-img">
@@ -136,7 +136,7 @@ export default function ProjectSection() {
 
           <div className="xb-heading-btn d-inline">
             <Link className="thm-btn agency-btn" href="/project">
-              <span className="text">view more projects</span>
+              <span className="text">view our AI agents</span>
               <span className="arrow">
                 <span className="arrow-icon">
                   <ArrowIcon />

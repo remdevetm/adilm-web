@@ -13,27 +13,27 @@ export default function ServiceFaq() {
   const faqItems = [
     {
       id: 1,
-      title: "01. Listening to Your Needs",
+      title: "01. Scoping Your Knowledge",
       content:
-        "We deliver customized AI solutions built around your specific business goals and challenges. By understanding your unique needs, we create intelligent systems that drive efficiency, enhance performance.",
+        "We map your data sources, access rules, and success metrics so retrieval is useful, safe, and measurable",
     },
     {
       id: 2,
-      title: "02. Tailored Solutions",
+      title: "02. Index Design",
       content:
-        "We deliver customized AI solutions built around your specific business goals and challenges. By understanding your unique needs, we create intelligent systems that drive efficiency, enhance performance.",
+        "We choose chunking, embeddings, and vector-store strategy to match your content and query patterns.",
     },
     {
       id: 3,
-      title: "03. Tactical Alignment",
+      title: "03. Pipeline Alignment",
       content:
-        "We deliver customized AI solutions built around your specific business goals and challenges. By understanding your unique needs, we create intelligent systems that drive efficiency, enhance performance.",
+        "We connect ingestion, retrieval, reranking, and tool-use so every answer is grounded and traceable.",
     },
     {
       id: 4,
-      title: "04. Measurable Results",
+      title: "04. Quality Reporting",
       content:
-        "We deliver customized AI solutions built around your specific business goals and challenges. By understanding your unique needs, we create intelligent systems that drive efficiency, enhance performance.",
+        "We measure retrieval quality, citation coverage, latency, and business impact, then iterate continuously.",
     },
   ];
 
@@ -42,7 +42,7 @@ export default function ServiceFaq() {
       <div className="row mt-none-50 align-items-center">
         {/* LEFT SIDE ACCORDION */}
         <div className="col-lg-6 mt-50">
-          <h2 className="details-content-title mb-40">Service process</h2>
+          <h2 className="details-content-title mb-40">RAG implementation process</h2>
 
           <div className="service_process_faq">
             <div className="accordion">

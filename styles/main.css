@@ -62,6 +62,17 @@
   --color-black: #000;
   --color-body: #00020f;
   --easing: cubic-bezier(0.67, 0.04, 0.3, 0.91);
+
+  /* Eco-Tech palette (used only when scoped under .service-details-page) */
+  --eco-primary: #223b05; /* deep forest */
+  --eco-secondary: #3f6a0b; /* moss green */
+  --eco-bg-main: #ffffff;
+  --eco-bg-alt: #f6f8f4;
+  --eco-border-soft: rgba(34, 59, 5, 0.10);
+  --eco-text-primary: #0f1408;
+  --eco-text-body: rgba(15, 20, 8, 0.70);
+  --eco-text-muted: rgba(15, 20, 8, 0.55);
+  --eco-shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.06);
 }
 
 .ai-marketing {
@@ -305,6 +316,997 @@ span {
 /* global css end */
 .body_wrap {
   position: relative;
+}
+
+.service-details-page {
+  /* Override palette for this page scope */
+  --color-primary: var(--eco-primary);
+  --color-secondary: var(--eco-secondary);
+  --color-heading: var(--eco-text-primary);
+  --color-default: var(--eco-text-body);
+  --color-gray: var(--eco-text-muted);
+
+  background:
+    radial-gradient(circle at top left, rgba(34, 59, 5, 0.10) 0, transparent 55%),
+    radial-gradient(circle at top right, rgba(34, 59, 5, 0.08) 0, transparent 55%),
+    radial-gradient(circle at bottom center, rgba(34, 59, 5, 0.06) 0, transparent 60%),
+    linear-gradient(to bottom, var(--eco-bg-main), var(--eco-bg-alt));
+  min-height: 100vh;
+  color: var(--eco-text-body);
+}
+
+/* Apply the same Eco-Tech look to the AI Chatbot page only */
+
+.ai-chatbot-page {
+  --color-primary: var(--eco-primary);
+  --color-secondary: var(--eco-secondary);
+  --color-heading: var(--eco-text-primary);
+  --color-default: var(--eco-text-body);
+  --color-gray: var(--eco-text-muted);
+
+  background:
+    radial-gradient(circle at top left, rgba(34, 59, 5, 0.10) 0, transparent 55%),
+    radial-gradient(circle at top right, rgba(34, 59, 5, 0.08) 0, transparent 55%),
+    radial-gradient(circle at bottom center, rgba(34, 59, 5, 0.06) 0, transparent 60%),
+    linear-gradient(to bottom, var(--eco-bg-main), var(--eco-bg-alt));
+  min-height: 100vh;
+  color: var(--eco-text-body);
+}
+
+.ai-chatbot-page .body_wrap {
+  background: transparent;
+}
+
+/* Ensure Eco-Tech styling applies across ALL AI Chatbot sections */
+
+.ai-chatbot-page .bg_img:not(footer) {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+.ai-chatbot-page .hero-linear,
+.ai-chatbot-page .faq-linear-shape,
+.ai-chatbot-page .process-sction::before,
+.ai-chatbot-page .integration-logo-wrap .xb-shape .shape {
+  background: transparent !important;
+  filter: none !important;
+}
+
+.ai-chatbot-page .hero-content .title,
+.ai-chatbot-page .sec-title--two .title,
+.ai-chatbot-page .process-title .title,
+.ai-chatbot-page .integration-content .title,
+.ai-chatbot-page .xb-feature-item-3 .xb-item--title,
+.ai-chatbot-page .pricing-item .xb-dollar,
+.ai-chatbot-page .ac-testimonial-item .xb-item--name {
+  color: var(--eco-text-primary);
+}
+
+.ai-chatbot-page .hero-content .sub-title,
+.ai-chatbot-page .sec-title--two .sub-title,
+.ai-chatbot-page .xb-feature-item-3 .xb-item--content,
+.ai-chatbot-page .integration-list li,
+.ai-chatbot-page .pricing-list li,
+.ai-chatbot-page .pricing-item .xb-dollar sub,
+.ai-chatbot-page .pricing-item .xb-price-chagne-btn p,
+.ai-chatbot-page .ac-testimonial-item .xb-item--content,
+.ai-chatbot-page .ac-testimonial-item .xb-item--desig {
+  color: var(--eco-text-body);
+}
+
+.ai-chatbot-page .sec-title--two .sub-title {
+  color: var(--eco-text-muted);
+}
+
+.ai-chatbot-page .xb-feature-item-3 .xb-item--inner,
+.ai-chatbot-page .pricing-item,
+.ai-chatbot-page .ac-testimonial-item,
+.ai-chatbot-page .integration-container,
+.ai-chatbot-page .xb-faq {
+  background: rgba(255, 255, 255, 0.72) !important;
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.ai-chatbot-page .pricing-item .toggle {
+  border: 1px solid var(--eco-border-soft);
+}
+
+.ai-chatbot-page .pricing-item .xb-tag {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--eco-border-soft);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.ai-chatbot-page .pricing-item .premium-plan {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+.ai-chatbot-page .integration-logo {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--eco-border-soft);
+}
+
+.ai-chatbot-page .integration-logo::before {
+  opacity: 0;
+}
+
+.ai-chatbot-page .xb-process-step {
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.ai-chatbot-page .xb-process-step .step-number,
+.ai-chatbot-page .xb-process-step .step-name {
+  color: var(--eco-text-primary);
+}
+
+.ai-chatbot-page .xb-faq::before {
+  opacity: 0;
+}
+
+.ai-chatbot-page .xb-faq .accordion_box {
+  border: 1px solid var(--eco-border-soft);
+}
+
+.ai-chatbot-page .xb-faq .accordion_box .block {
+  border-bottom: 1px solid var(--eco-border-soft);
+}
+
+.ai-chatbot-page .xb-faq .accordion_box .block .acc-btn {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--eco-text-primary);
+}
+
+.ai-chatbot-page .xb-faq .accordion_box .block .acc-btn .number {
+  color: rgba(15, 20, 8, 0.55);
+}
+
+.ai-chatbot-page .xb-faq .accordion_box .block .acc-btn .arrow {
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+.ai-chatbot-page .xb-faq .accordion_box .block .acc-btn .arrow span {
+  opacity: 0;
+}
+
+.ai-chatbot-page .xb-faq .accordion_box .block .acc-btn .arrow::before {
+  color: #ffffff;
+}
+
+.ai-chatbot-page .xb-faq .accordion_box .block .content {
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--eco-text-body);
+  border: 1px solid var(--eco-border-soft);
+}
+
+.ai-chatbot-page .xb-faq .accordion_box .block .content ul li i {
+  color: var(--eco-primary);
+}
+
+/* Apply the same Eco-Tech look to Contact page only */
+
+.contact-page {
+  --color-primary: var(--eco-primary);
+  --color-secondary: var(--eco-secondary);
+  --color-heading: var(--eco-text-primary);
+  --color-default: var(--eco-text-body);
+  --color-gray: var(--eco-text-muted);
+
+  background:
+    radial-gradient(circle at top left, rgba(34, 59, 5, 0.10) 0, transparent 55%),
+    radial-gradient(circle at top right, rgba(34, 59, 5, 0.08) 0, transparent 55%),
+    radial-gradient(circle at bottom center, rgba(34, 59, 5, 0.06) 0, transparent 60%),
+    linear-gradient(to bottom, var(--eco-bg-main), var(--eco-bg-alt));
+  min-height: 100vh;
+  color: var(--eco-text-body);
+}
+
+.contact-page .body_wrap {
+  background: transparent;
+}
+
+.contact-page .bg_img:not(footer) {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Breadcrumb */
+.contact-page .breadcrumb .breadcrumb-item {
+  color: rgba(15, 20, 8, 0.55);
+}
+
+.contact-page .breadcrumb__title {
+  color: #0f1408;
+}
+
+/* Header */
+.contact-page #xb-header-area .xb-header-area-sticky,
+.contact-page .header-style--one .xb-header-area-sticky {
+  background: transparent !important;
+}
+
+.contact-page .main-menu>ul>li>a {
+  color: var(--eco-text-primary);
+}
+
+.contact-page .main-menu>ul>li.menu-item-has-children>a span::after {
+  color: var(--eco-text-primary);
+}
+
+.contact-page .header-style--one .main-menu>ul>li>a {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 20, 8, 0.08);
+}
+
+.contact-page .header-style--one .main-menu>ul>li.menu-item-has-children>a span::after {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--eco-text-primary);
+  border: 1px solid rgba(15, 20, 8, 0.10);
+}
+
+.contact-page .header-style--one .main-menu>ul>li:hover>a>span::after,
+.contact-page .header-style--one .main-menu>ul>li.active>a>span::after {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+/* Contact form surface + typography */
+.contact-page .xb-contact-wrap {
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.contact-page .xb-contact-wrap::after {
+  background: rgba(34, 59, 5, 0.18) !important;
+}
+
+.contact-page .xb-contact-form,
+.contact-page .xb-main-contact {
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.contact-page .xb-contact-form .content,
+.contact-page .xb-contact-form .title,
+.contact-page .xb-contact-form .sub-title,
+.contact-page .contact-sec-title .title,
+.contact-page .xb-contact-item .xb-item--content {
+  color: var(--eco-text-primary);
+}
+
+.contact-page .clr-white {
+  color: var(--eco-text-body) !important;
+}
+
+.contact-page .xb-contact-form .xb-input-field input,
+.contact-page .xb-contact-form .xb-input-field textarea,
+.contact-page .xb-contact-form .xb-select-field .nice-select,
+.contact-page .xb-contact-form .xb-select-file {
+  background: rgba(255, 255, 255, 0.90);
+  color: var(--eco-text-primary);
+  border: 1px solid var(--eco-border-soft);
+}
+
+.contact-page .xb-contact-form .xb-input-field input~img,
+.contact-page .xb-contact-form .xb-input-field textarea~img,
+.contact-page .xb-contact-form .xb-select-field .nice-select~img {
+  filter: none;
+}
+
+.contact-page .xb-contact-form .xb-input-field label {
+  color: rgba(15, 20, 8, 0.55);
+}
+
+.contact-page .xb-contact-form .xb-select-file span {
+  border: 1px solid var(--eco-border-soft);
+  color: rgba(15, 20, 8, 0.65);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.contact-page .form-btn {
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary)) !important;
+}
+
+.contact-page .form-btn .xb-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.contact-page .form-btn:hover {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary)) !important;
+  filter: brightness(1.03);
+}
+
+/* Footer */
+.contact-page footer.footer.footer-style-one {
+  background-image:
+    radial-gradient(circle at top left, rgba(34, 59, 5, 0.10) 0, transparent 55%),
+    radial-gradient(circle at top right, rgba(34, 59, 5, 0.08) 0, transparent 55%),
+    radial-gradient(circle at bottom center, rgba(34, 59, 5, 0.06) 0, transparent 60%),
+    linear-gradient(to bottom, var(--eco-bg-main), var(--eco-bg-alt)) !important;
+  background-color: transparent !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-page .xb-footer-wrap {
+  background: transparent;
+  border-top: 1px solid var(--eco-border-soft);
+}
+
+.contact-page .xb-footer-nav-item .sub-title {
+  color: var(--eco-text-muted);
+}
+
+.contact-page .xb-footer-nav-item .title,
+.contact-page .xb-footer-bottom .contact-method,
+.contact-page .xb-footer-bottom .copyright-item p,
+.contact-page .xb-footer-bottom .copyright-item p a {
+  color: var(--eco-text-primary);
+}
+
+/* Apply the same Eco-Tech look to Blog page only */
+
+.blog-page {
+  --color-primary: var(--eco-primary);
+  --color-secondary: var(--eco-secondary);
+  --color-heading: var(--eco-text-primary);
+  --color-default: var(--eco-text-body);
+  --color-gray: var(--eco-text-muted);
+
+  background:
+    radial-gradient(circle at top left, rgba(34, 59, 5, 0.10) 0, transparent 55%),
+    radial-gradient(circle at top right, rgba(34, 59, 5, 0.08) 0, transparent 55%),
+    radial-gradient(circle at bottom center, rgba(34, 59, 5, 0.06) 0, transparent 60%),
+    linear-gradient(to bottom, var(--eco-bg-main), var(--eco-bg-alt));
+  min-height: 100vh;
+  color: var(--eco-text-body);
+}
+
+.blog-page .body_wrap {
+  background: transparent;
+}
+
+.blog-page .bg_img:not(footer) {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Breadcrumb */
+.blog-page .breadcrumb .breadcrumb-item {
+  color: rgba(15, 20, 8, 0.55);
+}
+
+.blog-page .breadcrumb__title {
+  color: #0f1408;
+}
+
+/* Header */
+.blog-page #xb-header-area .xb-header-area-sticky,
+.blog-page .header-style--one .xb-header-area-sticky {
+  background: transparent !important;
+}
+
+.blog-page .main-menu>ul>li>a {
+  color: var(--eco-text-primary);
+}
+
+.blog-page .main-menu>ul>li.menu-item-has-children>a span::after {
+  color: var(--eco-text-primary);
+}
+
+.blog-page .header-style--one .main-menu>ul>li>a {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 20, 8, 0.08);
+}
+
+.blog-page .header-style--one .main-menu>ul>li.menu-item-has-children>a span::after {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--eco-text-primary);
+  border: 1px solid rgba(15, 20, 8, 0.10);
+}
+
+.blog-page .header-style--one .main-menu>ul>li:hover>a>span::after,
+.blog-page .header-style--one .main-menu>ul>li.active>a>span::after {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+/* Blog cards + sidebar inputs */
+.blog-page .blog_details_item,
+.blog-page .recent_post_block .recent_post_item {
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.blog-page .blog_details_item::before,
+.blog-page .recent_post_block .recent_post_item::before,
+.blog-page .blog-pagination li a::before {
+  opacity: 0;
+}
+
+.blog-page .blog_details_item .xb-item--tag,
+.blog-page .post_meta .meta_label1 {
+  color: var(--eco-text-muted);
+}
+
+.blog-page .blog_details_item .xb-item--title,
+.blog-page .sidebar_widget_title,
+.blog-page .recent_post_block .recent_post_item .post-title,
+.blog-page .category_list_block a,
+.blog-page .tags_block li a {
+  color: var(--eco-text-primary);
+}
+
+.blog-page .blog_details_item .xb-item--content,
+.blog-page .recent_post_block .recent_post_item span {
+  color: var(--eco-text-body);
+}
+
+.blog-page .form-group .form-control {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--eco-text-primary);
+  border: 1px solid var(--eco-border-soft);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.blog-page .category_list_block li {
+  border-bottom: 1px solid var(--eco-border-soft);
+}
+
+.blog-page .category_list_block a:hover span {
+  color: var(--eco-primary);
+}
+
+.blog-page .tags_block li a {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--eco-border-soft);
+}
+
+.blog-page .tags_block li a:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+.blog-page .blog-pagination li a {
+  color: var(--eco-text-primary);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--eco-border-soft);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.blog-page .blog-pagination li.active a,
+.blog-page .blog-pagination li:hover a {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+/* Footer */
+.blog-page footer.footer.footer-style-one {
+  background-image:
+    radial-gradient(circle at top left, rgba(34, 59, 5, 0.10) 0, transparent 55%),
+    radial-gradient(circle at top right, rgba(34, 59, 5, 0.08) 0, transparent 55%),
+    radial-gradient(circle at bottom center, rgba(34, 59, 5, 0.06) 0, transparent 60%),
+    linear-gradient(to bottom, var(--eco-bg-main), var(--eco-bg-alt)) !important;
+  background-color: transparent !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blog-page .xb-footer-wrap {
+  background: transparent;
+  border-top: 1px solid var(--eco-border-soft);
+}
+
+.blog-page .xb-footer-nav-item .sub-title {
+  color: var(--eco-text-muted);
+}
+
+.blog-page .xb-footer-nav-item .title,
+.blog-page .xb-footer-bottom .contact-method,
+.blog-page .xb-footer-bottom .copyright-item p,
+.blog-page .xb-footer-bottom .copyright-item p a {
+  color: var(--eco-text-primary);
+}
+
+/* Apply the same Eco-Tech look to Project pages only */
+
+.project-page,
+.project-details-page {
+  --color-primary: var(--eco-primary);
+  --color-secondary: var(--eco-secondary);
+  --color-heading: var(--eco-text-primary);
+  --color-default: var(--eco-text-body);
+  --color-gray: var(--eco-text-muted);
+
+  background:
+    radial-gradient(circle at top left, rgba(34, 59, 5, 0.10) 0, transparent 55%),
+    radial-gradient(circle at top right, rgba(34, 59, 5, 0.08) 0, transparent 55%),
+    radial-gradient(circle at bottom center, rgba(34, 59, 5, 0.06) 0, transparent 60%),
+    linear-gradient(to bottom, var(--eco-bg-main), var(--eco-bg-alt));
+  min-height: 100vh;
+  color: var(--eco-text-body);
+}
+
+.project-page .body_wrap,
+.project-details-page .body_wrap {
+  background: transparent;
+}
+
+.project-page .bg_img:not(footer),
+.project-details-page .bg_img:not(footer) {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Breadcrumb */
+.project-page .breadcrumb .breadcrumb-item,
+.project-details-page .breadcrumb .breadcrumb-item {
+  color: rgba(15, 20, 8, 0.55);
+}
+
+.project-page .breadcrumb__title,
+.project-details-page .breadcrumb__title {
+  color: #0f1408;
+}
+
+/* Header */
+.project-page #xb-header-area .xb-header-area-sticky,
+.project-page .header-style--one .xb-header-area-sticky,
+.project-details-page #xb-header-area .xb-header-area-sticky,
+.project-details-page .header-style--one .xb-header-area-sticky {
+  background: transparent !important;
+}
+
+.project-page .main-menu>ul>li>a,
+.project-details-page .main-menu>ul>li>a {
+  color: var(--eco-text-primary);
+}
+
+.project-page .main-menu>ul>li.menu-item-has-children>a span::after,
+.project-details-page .main-menu>ul>li.menu-item-has-children>a span::after {
+  color: var(--eco-text-primary);
+}
+
+.project-page .header-style--one .main-menu>ul>li>a,
+.project-details-page .header-style--one .main-menu>ul>li>a {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 20, 8, 0.08);
+}
+
+.project-page .header-style--one .main-menu>ul>li.menu-item-has-children>a span::after,
+.project-details-page .header-style--one .main-menu>ul>li.menu-item-has-children>a span::after {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--eco-text-primary);
+  border: 1px solid rgba(15, 20, 8, 0.10);
+}
+
+.project-page .header-style--one .main-menu>ul>li:hover>a>span::after,
+.project-page .header-style--one .main-menu>ul>li.active>a>span::after,
+.project-details-page .header-style--one .main-menu>ul>li:hover>a>span::after,
+.project-details-page .header-style--one .main-menu>ul>li.active>a>span::after {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+/* Project list cards (xb-project-wrap_2) */
+.project-page .xb-project-content .xb-item--inner {
+  background: rgba(255, 255, 255, 0.78) !important;
+  border: 1px solid var(--eco-border-soft);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.project-page .xb-project-content .xb-item--inner::before {
+  opacity: 0.05;
+}
+
+.project-page .xb-project-content .xb-item--title,
+.project-page .xb-project-content .xb-item--content,
+.project-page .xb-project-content .xb-item--inner,
+.project-page .xb-project-content .xb-item--inner * {
+  color: var(--eco-text-primary);
+}
+
+.project-page .clr-white {
+  color: var(--eco-text-body) !important;
+}
+
+.project-page .thm-btn.agency-btn {
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary)) !important;
+}
+
+.project-page .thm-btn.agency-btn .arrow .arrow-icon svg rect {
+  fill: #ffffff;
+}
+
+/* Project details page content */
+.project-details-page .project-meta {
+  border-top: 1px solid var(--eco-border-soft);
+}
+
+.project-details-page .project-meta,
+.project-details-page .project-meta li,
+.project-details-page .project-details,
+.project-details-page .details-content-title,
+.project-details-page .details-content,
+.project-details-page p,
+.project-details-page li {
+  color: var(--eco-text-body);
+}
+
+.project-details-page h1,
+.project-details-page h2,
+.project-details-page h3,
+.project-details-page h4,
+.project-details-page h5,
+.project-details-page h6 {
+  color: var(--eco-text-primary);
+}
+
+/* Footer */
+.project-page footer.footer.footer-style-one,
+.project-details-page footer.footer.footer-style-one {
+  background-image:
+    radial-gradient(circle at top left, rgba(34, 59, 5, 0.10) 0, transparent 55%),
+    radial-gradient(circle at top right, rgba(34, 59, 5, 0.08) 0, transparent 55%),
+    radial-gradient(circle at bottom center, rgba(34, 59, 5, 0.06) 0, transparent 60%),
+    linear-gradient(to bottom, var(--eco-bg-main), var(--eco-bg-alt)) !important;
+  background-color: transparent !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-page .xb-footer-wrap,
+.project-details-page .xb-footer-wrap {
+  background: transparent;
+  border-top: 1px solid var(--eco-border-soft);
+}
+
+.project-page .xb-footer-nav-item .sub-title,
+.project-details-page .xb-footer-nav-item .sub-title {
+  color: var(--eco-text-muted);
+}
+
+.project-page .xb-footer-nav-item .title,
+.project-details-page .xb-footer-nav-item .title,
+.project-page .xb-footer-bottom .contact-method,
+.project-details-page .xb-footer-bottom .contact-method,
+.project-page .xb-footer-bottom .copyright-item p,
+.project-details-page .xb-footer-bottom .copyright-item p,
+.project-page .xb-footer-bottom .copyright-item p a,
+.project-details-page .xb-footer-bottom .copyright-item p a {
+  color: var(--eco-text-primary);
+}
+
+/* Header (AI Chatbot uses header-style--two) */
+
+.ai-chatbot-page #xb-header-area .xb-header-area-sticky {
+  background-color: transparent !important;
+}
+
+.ai-chatbot-page .header-style--two .header__wrap {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.ai-chatbot-page .header-style--two .header__wrap::before {
+  opacity: 0;
+}
+
+.ai-chatbot-page .header-style--two .main-menu>ul>li>a,
+.ai-chatbot-page .header-style--two .main-menu ul li a,
+.ai-chatbot-page .header-style--two .main-menu a.scrollspy-btn {
+  color: var(--eco-text-primary);
+}
+
+.ai-chatbot-page .main-menu a.scrollspy-btn {
+  color: var(--eco-text-primary);
+}
+
+.ai-chatbot-page .main-menu>ul>li:hover>a,
+.ai-chatbot-page .main-menu>ul>li.active>a {
+  color: var(--eco-primary);
+}
+
+.ai-chatbot-page .main-menu>ul>li:hover>a>span::after,
+.ai-chatbot-page .main-menu>ul>li.active>a>span::after {
+  color: var(--eco-primary);
+}
+
+.ai-chatbot-page .main-menu>ul>li.menu-item-has-children>a span::after {
+  color: var(--eco-text-primary);
+}
+
+.ai-chatbot-page .thm-btn.chatbot-btn {
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+/* Footer (AI Chatbot uses its own footer with inline background image) */
+
+.ai-chatbot-page footer.footer.bg_img {
+  background-image:
+    radial-gradient(circle at top left, rgba(34, 59, 5, 0.10) 0, transparent 55%),
+    radial-gradient(circle at top right, rgba(34, 59, 5, 0.08) 0, transparent 55%),
+    radial-gradient(circle at bottom center, rgba(34, 59, 5, 0.06) 0, transparent 60%),
+    linear-gradient(to bottom, var(--eco-bg-main), var(--eco-bg-alt)) !important;
+  background-color: transparent !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ai-chatbot-page .ac-footer-wrap {
+  background: rgba(255, 255, 255, 0.70);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.ai-chatbot-page .ac-footer-wrap::before {
+  opacity: 0;
+}
+
+.ai-chatbot-page .ac-footer-nav li a {
+  color: var(--eco-text-primary);
+}
+
+.ai-chatbot-page .ac-footer-nav li a:hover {
+  color: var(--eco-primary);
+}
+
+.ai-chatbot-page .xb-footer-inner {
+  border-top: 1px solid var(--eco-border-soft);
+  border-bottom: 1px solid var(--eco-border-soft);
+}
+
+.ai-chatbot-page .xb-footer-inner .footer-col:not(:last-child) {
+  border-right: 1px solid var(--eco-border-soft);
+}
+
+.ai-chatbot-page .xb-footer-inner .xb-footer-item .sub-title,
+.ai-chatbot-page .xb-copyright p,
+.ai-chatbot-page .xb-copyright p a,
+.ai-chatbot-page .ai-footer-links li a {
+  color: var(--eco-text-primary);
+}
+
+.ai-chatbot-page .xb-footer-input-form input {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--eco-text-primary);
+  border: 1px solid var(--eco-border-soft);
+}
+
+.ai-chatbot-page .xb-footer-input-form input::placeholder {
+  color: var(--eco-text-muted);
+}
+
+.ai-chatbot-page .xb-footer-input-form button {
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+.ai-chatbot-page .xb-footer-input-form button::before {
+  opacity: 0;
+}
+
+.ai-chatbot-page .xb-social_icon li a {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--eco-border-soft);
+}
+
+.ai-chatbot-page .xb-social_icon li a::before,
+.ai-chatbot-page .xb-social_icon li a::after {
+  opacity: 0;
+}
+
+.ai-chatbot-page .xb-social_icon li a svg path {
+  fill: var(--eco-text-primary) !important;
+}
+
+.ai-chatbot-page .xb-social_icon li a:hover {
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+.ai-chatbot-page .xb-social_icon li a:hover svg path {
+  fill: #ffffff !important;
+}
+
+.ai-chatbot-page .xb-footer-bottom-title .title {
+  color: rgba(15, 20, 8, 0.75);
+}
+
+.ai-chatbot-page .xb-footer-linear {
+  background: linear-gradient(180deg, rgba(34, 59, 5, 0.22) 0%, rgba(34, 59, 5, 0.00) 100%);
+}
+
+.service-details-page .details-content-title,
+.service-details-page p,
+.service-details-page li,
+.service-details-page .service-outcome-list li {
+  color: var(--eco-text-primary);
+}
+
+/* Eco-Tech UI primitives (service details only) */
+
+.service-details-page .eco-card {
+  background: var(--eco-bg-main);
+  border-radius: 24px;
+  padding: 32px 28px;
+  border: 1px solid var(--eco-border-soft);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+@media (max-width: 767px) {
+  .service-details-page .eco-card {
+    padding: 24px 20px;
+  }
+}
+
+.service-details-page .eco-button,
+.service-details-page .thm-btn {
+  padding: 14px 26px;
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+  color: #ffffff;
+  box-shadow: var(--eco-shadow-soft);
+  border-radius: 999px;
+}
+
+.service-details-page .eco-button:hover,
+.service-details-page .thm-btn:hover {
+  filter: brightness(1.03);
+}
+
+/* Breadcrumb theming within service details page */
+
+.service-details-page .breadcrumb .breadcrumb-item {
+  color: rgba(15, 20, 8, 0.55);
+}
+
+.service-details-page .breadcrumb .breadcrumb-item a {
+  color: inherit;
+}
+
+.service-details-page .breadcrumb__title {
+  color: #0f1408;
+}
+
+/* Header theming within service details page */
+
+.service-details-page .main-menu>ul>li>a {
+  color: var(--eco-text-primary);
+}
+
+.service-details-page .main-menu>ul>li.menu-item-has-children>a span::after {
+  color: var(--eco-text-primary);
+}
+
+.service-details-page .header-style--one .main-menu>ul>li>a {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 20, 8, 0.08);
+}
+
+.service-details-page .header-style--one .main-menu>ul>li.menu-item-has-children>a span::after {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--eco-text-primary);
+  border: 1px solid rgba(15, 20, 8, 0.10);
+}
+
+.service-details-page .header-style--one .main-menu>ul>li:hover>a>span::after,
+.service-details-page .header-style--one .main-menu>ul>li.active>a>span::after {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+.service-details-page .thm-btn .arrow-icon {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.service-details-page .thm-btn .arrow-icon svg rect {
+  fill: #ffffff;
+}
+
+/* Header + footer theming within service details page */
+
+.service-details-page #xb-header-area .xb-header-area-sticky,
+.service-details-page .header-style--one .xb-header-area-sticky {
+  background: transparent !important;
+}
+
+.service-details-page .xb-footer-wrap {
+  background: transparent;
+  border-top: 1px solid var(--eco-border-soft);
+}
+
+.service-details-page .xb-footer-bottom .contact-item:not(:last-child) {
+  border-right: 1px solid var(--eco-border-soft);
+}
+
+@media (max-width: 767px) {
+  .service-details-page .xb-footer-bottom .contact-item:not(:last-child) {
+    border-bottom: 1px solid var(--eco-border-soft);
+  }
+}
+
+.service-details-page .xb-footer-bottom .contact-method,
+.service-details-page .xb-footer-bottom .copyright-item p,
+.service-details-page .xb-footer-bottom .copyright-item p a {
+  color: var(--eco-text-primary);
+}
+
+/* Eco styling for footer hero (service details only) without hiding AIVORA text */
+
+.service-details-page .xb-footer-heading .title {
+  color: rgba(18, 21, 33, 0.75);
+}
+
+.service-details-page .xb-footer-heading .mail {
+  color: #ffffff;
+}
+
+.service-details-page .xb-footer-heading .mail::before {
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+.service-details-page footer.footer.footer-style-one {
+  /* Footer has an inline backgroundImage style; override it. */
+  background-image:
+    radial-gradient(circle at top left, rgba(34, 59, 5, 0.10) 0, transparent 55%),
+    radial-gradient(circle at top right, rgba(34, 59, 5, 0.08) 0, transparent 55%),
+    radial-gradient(circle at bottom center, rgba(34, 59, 5, 0.06) 0, transparent 60%),
+    linear-gradient(to bottom, var(--eco-bg-main), var(--eco-bg-alt)) !important;
+  background-color: transparent !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.service-details-page .xb-footer-nav-item .sub-title {
+  color: var(--eco-text-muted);
+}
+
+.service-details-page .xb-footer-nav-item .title {
+  color: var(--eco-text-primary);
+}
+
+/* Service details: make process steps primary by default (no hover required) */
+
+.service-details-page .service_process_faq .accordion .accordion-button {
+  color: var(--eco-text-primary);
+}
+
+.service-details-page .service_process_faq .accordion .accordion-button:not(:last-child) {
+  border-bottom: 1px solid var(--eco-border-soft);
+}
+
+.service-details-page .service_process_faq .accordion .accordion-button:hover {
+  color: var(--eco-text-primary);
+  text-decoration: underline;
+  text-decoration-color: rgba(34, 59, 5, 0.35);
+  text-underline-offset: 6px;
+}
+
+.service-details-page .service_process_faq .accordion .accordion-body {
+  background-color: rgba(255, 255, 255, 0.70);
+  border: 1px solid var(--eco-border-soft);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.service-details-page .content_layer_group span {
+  color: var(--eco-primary);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--eco-border-soft);
+  box-shadow: var(--eco-shadow-soft);
+}
+
+.service-details-page .content_layer_group span::after {
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+.service-details-page .content_layer_group>li.active span,
+.service-details-page .content_layer_group>li[aria-expanded=true] span {
+  color: #ffffff;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+.service-details-page .content_layer_group>li:hover span {
+  transform: translateY(-2px);
 }
 
 .bg_img {

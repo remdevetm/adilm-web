@@ -20,7 +20,7 @@ export const metadata = {
 const HomePage3 = () => {
   return (
     <Fragment>
-      <div className="ai-agency">
+      <div className="ai-agency ai-chatbot-page">
         <div className="body_wrap o-clip">
           <HeaderThree />
 

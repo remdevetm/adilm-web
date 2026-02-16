@@ -14,12 +14,12 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="about-page inner-page">
+    <div className="about-page inner-page contact-page">
       <div className="body_wrap o-clip">
         <Header />
 
         <main>
-          <PageTitle pageTitle="Contact Us" pagesub="Contact Us" />
+          <PageTitle pageTitle="Contact Us" pagesub="Contact Us" disableBgImage />
 
           <ContactInfoSection />
 

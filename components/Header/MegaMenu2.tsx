@@ -175,7 +175,7 @@ export default function MegaMenuServices() {
 
                       <div className="xb-item--holder">
                         <h3 className="xb-item--title">
-                          General AI projects..
+                          General AI agents..
                         </h3>
                         <p className="xb-item--text">
                           We deliver AI solutions that streamline operations and boost efficiency.
@@ -185,7 +185,7 @@ export default function MegaMenuServices() {
                           className="thm-btn agency-btn megamenu-btn"
                           href="/project"
                         >
-                          <span className="text">read more project</span>
+                          <span className="text">view our AI agents</span>
                         </Link>
 
                       </div>

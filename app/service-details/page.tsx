@@ -5,19 +5,23 @@ import Scrollbar from "@/components/scrollbar/scrollbar";
 import Footer from "@/components/footer/Footer";
 
 export const metadata = {
-  title: "Service Details | Aivora – AI Agency & Technology",
+  title: "Rag as a Service | Aivora – AI Agency & Technology",
   description:
-    "Detailed information about Aivora's AI-powered services, technologies, and business solutions.",
+    "Rag as a Service – scalable, production-ready Retrieval-Augmented Generation solutions tailored to your business.",
 };
 
 export default function ServiceSinglePage() {
   return (
-    <div className="about-page inner-page">
+    <div className="about-page inner-page service-details-page">
       <div className="body_wrap o-clip">
         <Header />
 
         <main>
-          <PageTitle pageTitle="Service Details" pagesub="Service Details" />
+          <PageTitle
+            pageTitle="Rag as a Service"
+            pagesub="Rag as a Service"
+            disableBgImage
+          />
           <ServiceDetails />
         </main>
 
