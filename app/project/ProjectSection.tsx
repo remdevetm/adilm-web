@@ -1,10 +1,15 @@
+import salesPitchImg from "@/public/images/project/Sales pitch and AI collaboration.png";
+import chatgptCopilotImg from "@/public/images/project/ChatGPT Image Feb 8, 2026 at 06_56_59 AM.png";
+import chatgptTutorImg from "@/public/images/project/ChatGPT Image Feb 8, 2026 at 07_03_53 AM.png";
 import Link from "next/link";
 import Image from "next/image";
 
 // IMPORT IMAGES
 import img02 from "@/public/images/project/img02.jpg";
+import chatgptImg from "@/public/images/project/ChatGPT Image Feb 8, 2026 at 06_54_06 AM.png";
 import img03 from "@/public/images/project/img03.jpg";
 import img04 from "@/public/images/project/img04.jpg";
+import aiAuditor from "@/public/images/project/AI auditor interacting with financial data.png";
 import img05 from "@/public/images/project/img05.jpg";
 import img06 from "@/public/images/project/img06.jpg";
 
@@ -39,35 +44,35 @@ const projectData = [
     title: "Autonomous Customer Service Agent..",
     content:
       "An end-to-end support agent that chats with customers, logs tickets into the helpdesk, checks billing, reminds users to update payments, verifies receipts, and reinstates accounts automatically once cleared.",
-    images: [img02, img02, img02, img02],
+    images: [chatgptImg, chatgptImg, chatgptImg, chatgptImg],
     reverse: false,
   },
   {
     title: "Co-pilot for Humans..",
     content:
       "A real-time co‑pilot that listens to support calls and suggests next questions, product recommendations, appointment scheduling, and clear explanations. After the call, it runs QA and highlights improvements.",
-    images: [img03, img03, img03, img03],
+    images: [chatgptCopilotImg, chatgptCopilotImg, chatgptCopilotImg, chatgptCopilotImg],
     reverse: true,
   },
   {
     title: "AI Agents for Auditors..",
     content:
       "AI agents for auditors that ingest semi‑structured and structured data, trace anomalies, generate evidence trails, and auto‑populate audit templates. They summarize risk areas and support deep, repeatable reviews.",
-    images: [img04, img04, img04, img04],
+    images: [aiAuditor, aiAuditor, aiAuditor, aiAuditor],
     reverse: false,
   },
   {
     title: "Proposal Writing Agent..",
     content:
       "A proposal-writing agent that turns sales conversations into polished, tailored proposals. It maps customer needs to your catalog, drafts scope and pricing language, and outputs ready-to-send documents fast.",
-    images: [img05, img05, img05, img05],
+    images: [salesPitchImg, salesPitchImg, salesPitchImg, salesPitchImg],
     reverse: true,
   },
   {
     title: "AI Tutor & Simulation Coach..",
     content:
       "An AI tutor that teaches any subject and runs simulations for customer service, interviews, and tertiary learning. It practices dialogues, gives step-by-step coaching, and builds confidence through feedback.",
-    images: [img06, img06, img06, img06],
+    images: [chatgptTutorImg, chatgptTutorImg, chatgptTutorImg, chatgptTutorImg],
     reverse: false,
   },
 ];

@@ -5,9 +5,9 @@ import Footer from "@/components/footer/Footer";
 import ProjectSection from "./ProjectSection";
 
 export const metadata = {
-  title: "Our AI agents | Aivora – AI Agency & Technology",
+  title: "Our AI agents | Adilm – AI Agency & Technology",
   description:
-    "Explore Aivora's AI agents across chatbot, NLP, vision, marketing, and analytics—built to deliver real business impact.",
+    "Explore Adilm's AI agents across chatbot, NLP, vision, marketing, and analytics—built to deliver real business impact.",
 };
 
 export default function ProjectPage() {

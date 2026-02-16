@@ -7,9 +7,9 @@ import ContactForm from "@/components/ContactFrom/ContactForm";
 import contactBg from "@/public/images/bg/contact-bg02.png";
 
 export const metadata = {
-  title: "Contact Us | Aivora – AI Agency & Technology",
+  title: "Contact Us | Adilm – AI Agency & Technology",
   description:
-    "Get in touch with Aivora for AI solutions, automation services, consultations, and business inquiries.",
+    "Get in touch with Adilm for AI solutions, automation services, consultations, and business inquiries.",
 };
 
 export default function ContactPage() {

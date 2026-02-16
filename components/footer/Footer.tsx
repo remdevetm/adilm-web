@@ -67,11 +67,11 @@ export default function Footer() {
 
         {/* Heading */}
         <div className="xb-footer-heading wow zoomIn" data-wow-duration="600ms">
-          <h1 className="title">Aivora</h1>
+          <h1 className="title">Adilm</h1>
 
-          <a className="mail" href="mailto:aivora@domain.com">
+          <a className="mail" href="mailto:john.kitenge@webparam.org">
             <Image src={emailIcon} alt="email" />
-            aivora@domain.com
+            john.kitenge@webparam.org
           </a>
         </div>
 
@@ -99,7 +99,7 @@ export default function Footer() {
             <div className="xb-social-media-item ul_li_between" key={idx}>
               <div className="xb-item--holder ul_li">
                 <div className="xb-item--icon">{social.icon}</div>
-                <span className="xb-item--name">{social.name}</span>
+                <span className="xb-item--name" style={{color: 'var(--eco-text-primary)'}}>{social.name}</span>
               </div>
 
               <span className="xb-item--arrow">
@@ -121,22 +121,22 @@ export default function Footer() {
         <div className="xb-footer-bottom">
           <div className="contact-item">
             <Image src={locationIcon} alt="location" />
-            <span className="contact-method">4517 Washington, USA</span>
+            <span className="contact-method">Cnr Tyrwhitt & 24 Cradock Ave, Rosebank, JHB, 2196</span>
           </div>
 
           <div className="contact-item copyright-item">
             <p>
               Copyright © 2025{" "}
-              <Link href="/">Aivora</Link>, All rights reserved.
+              <Link href="/">Adilm</Link>, All rights reserved.
             </p>
           </div>
 
           <div className="contact-item">
-            <a href="tel:+112304528597">
+            <a href="tel:+27672248032">
               <Image src={callIcon} alt="call" />
             </a>
-            <a className="contact-method" href="tel:+112304528597">
-              +(1) 1230 452 8597
+            <a className="contact-method" href="tel:+27672248032">
+              +27 67 224 8032
             </a>
           </div>
         </div>

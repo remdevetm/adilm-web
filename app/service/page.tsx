@@ -5,9 +5,9 @@ import Scrollbar from "@/components/scrollbar/scrollbar";
 import Footer from "@/components/footer/Footer";
 
 export const metadata = {
-  title: "Services | Aivora – AI Agency & Technology",
+  title: "Services | Adilm – AI Agency & Technology",
   description:
-    "Discover Aivora’s AI-powered services, including automation, analytics, product development, branding, and enterprise solutions.",
+    "Discover Adilm’s AI-powered services, including automation, analytics, product development, branding, and enterprise solutions.",
 };
 
 export default function ServicePage() {

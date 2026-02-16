@@ -34,176 +34,38 @@ const Icons = {
 };
 
 export default function BlogList() {
+  const blogPosts = [
+    { title: "How AI is Transforming Businesses Across Industries", link: "/blog-details" },
+    { title: "Getting started with AI Beginner Guide for Business Leaders", link: "/blog-details" },
+    { title: "The Future of Work: How AI is Changing the Way We Work", link: "/blog-details" },
+    { title: "How Artificial Intelligence Drives Decision-Making", link: "/blog-details" },
+    { title: "Exploring AI Integration in Modern Business Solutions", link: "/blog-details" },
+    { title: "Revolutionizing Industries with the Power of AI", link: "/blog-details" },
+  ];
   return (
     <div>
       <BlogSlider />
-
       <section className="blog_details_section pt-120">
         <div className="container">
           <div className="row mt-none-50 g-0 align-items-start">
             <div className="col-lg-8 mt-50">
               <div className="blog_details_content">
-
-                {/* ITEM 1 */}
-                <div className="blog_details_item img-hove-effect ul_li xb-border">
-                  <div className="xb-item--img xb-img">
-                    {[1, 2, 3, 4].map((i) => (
-                      <Link key={i} href="/blog-details">
-                        <img src={blog05.src} alt="" />
-                      </Link>
-                    ))}
-                  </div>
-
-                  <div className="xb-item--holder">
-                    <Link href="/blog-details" className="xb-item--tag">#ai tools tips</Link>
-
-                    <h3 className="xb-item--title border-effect-2">
-                      <Link href="/blog-details">
-                        How our AI agency delivers next-gen automation tools..
-                      </Link>
-                    </h3>
-
-                    <span className="xb-item--content">
-                      Our AI agency creates smart automation tools simplify.
-                    </span>
-
-                    <div className="xb-item--button mt-40">
-                      <Link className="thm-btn agency-btn" href="/blog-details">
-                        <span className="text">Read more</span>
-                        <span className="arrow">
-                          <span className="arrow-icon">{Icons.arrow}</span>
-                        </span>
-                      </Link>
+                {blogPosts.map((post, idx) => (
+                  <div className="blog_details_item xb-border" key={idx}>
+                    <div className="xb-item--inner">
+                      <h3 className="xb-item--title border-effect-2">
+                        <Link href={post.link}>{post.title}</Link>
+                      </h3>
+                      <div className="xb-item--button mt-40">
+                        <Link className="thm-btn agency-btn" href={post.link}>
+                          <span className="text">Read more</span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                {/* ITEM 2 */}
-                <div className="blog_details_item xb-border">
-                  <div className="xb-item--inner">
-                    <Link href="/blog-details" className="xb-item--tag">#chatbots tips</Link>
-
-                    <h3 className="xb-item--title border-effect-2">
-                      <Link href="/blog-details">From lead generation to sales conversion...</Link>
-                    </h3>
-
-                    <span className="xb-item--content">
-                      Smart chatbots are transforming the way businesses interact with customers—from the first touchpoint to the final sale. By engaging visitors.
-                    </span>
-
-                    <div className="xb-item--button mt-40">
-                      <Link className="thm-btn agency-btn" href="/blog-details">
-                        <span className="text">Read more</span>
-                        <span className="arrow">
-                          <span className="arrow-icon">{Icons.arrow}</span>
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ITEM 3 */}
-                <div className="blog_details_item img-hove-effect ul_li xb-border">
-                  <div className="xb-item--img xb-img">
-                    {[1, 2, 3, 4].map((i) => (
-                      <Link key={i} href="/blog-details">
-                        <img src={blog06.src} alt="" />
-                      </Link>
-                    ))}
-                  </div>
-
-                  <div className="xb-item--holder">
-                    <Link href="/blog-details" className="xb-item--tag">#chatbots tips</Link>
-
-                    <h3 className="xb-item--title border-effect-2">
-                      <Link href="/blog-details">
-                        How AI chatbots are boosting sales for E-commerce brands..
-                      </Link>
-                    </h3>
-
-                    <span className="xb-item--content">
-                      AI chatbots are becoming powerful sales tools.
-                    </span>
-
-                    <div className="xb-item--button mt-40">
-                      <Link className="thm-btn agency-btn" href="/blog-details">
-                        <span className="text">Read more</span>
-                        <span className="arrow">
-                          <span className="arrow-icon">{Icons.arrow}</span>
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ITEM 4 */}
-                <div className="blog_details_item xb-border">
-                  <div className="xb-item--inner">
-                    <Link href="/blog-details" className="xb-item--tag">#ai marketing</Link>
-
-                    <h3 className="xb-item--title border-effect-2">
-                      <Link href="/blog-details">10 Real-world ways AI improves efficiency...</Link>
-                    </h3>
-
-                    <span className="xb-item--content">
-                     AI is no longer a future concept—it's actively reshaping how businesses run today. From automating back-office tasks to optimizing ad spend and streamlining.
-                    </span>
-
-                    <div className="xb-item--button mt-40">
-                      <Link className="thm-btn agency-btn" href="/blog-details">
-                        <span className="text">Read more</span>
-                        <span className="arrow">
-                          <span className="arrow-icon">{Icons.arrow}</span>
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ITEM 5 */}
-                <div className="blog_details_item img-hove-effect ul_li xb-border">
-                  <div className="xb-item--img xb-img">
-                    {[1, 2, 3, 4].map((i) => (
-                      <Link key={i} href="/blog-details">
-                        <img src={blog07.src} alt="" />
-                      </Link>
-                    ))}
-                  </div>
-
-                  <div className="xb-item--holder">
-                    <Link href="/blog-details" className="xb-item--tag">#ai tips</Link>
-
-                    <h3 className="xb-item--title border-effect-2">
-                      <Link href="/blog-details">Is your business AI-ready?</Link>
-                    </h3>
-
-                    <span className="xb-item--content">
-                      Adopting AI can be a game-changer...
-                    </span>
-
-                    <div className="xb-item--button mt-40">
-                      <Link className="thm-btn agency-btn" href="/blog-details">
-                        <span className="text">Read more</span>
-                        <span className="arrow">
-                          <span className="arrow-icon">{Icons.arrow}</span>
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* PAGINATION */}
-                <ul className="blog-pagination ul_li">
-                  <li><Link className="xb-border" href="#"><i className="fas fa-chevron-double-left"></i></Link></li>
-                  <li><Link className="xb-border" href="#">1</Link></li>
-                  <li className="active"><Link className="xb-border" href="#">2</Link></li>
-                  <li><Link className="xb-border" href="#">3</Link></li>
-                  <li><Link className="xb-border" href="#"><i className="fas fa-chevron-double-right"></i></Link></li>
-                </ul>
-
+                ))}
               </div>
             </div>
-
             {/* SIDEBAR */}
             <BlogSidebar />
           </div>
