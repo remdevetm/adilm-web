@@ -24,19 +24,19 @@ const TESTIMONIALS = [
     avatar: author1,
     name: "Priya Ramirez",
     title: "Manager - SwiftLogix",
-    text: "Aivora now automates over 70% of our customer queries, saving hours of manual work daily. It’s improved both our response time and overall customer satisfaction.",
+    text: "Adilm now automates over 70% of our customer queries, saving hours of manual work daily. It’s improved both our response time and overall customer satisfaction.",
   },
   {
     avatar: author2,
     name: "Sebastian Clark",
     title: "CEO & Founder - DocFlow",
-    text: "We launched Aivora in just minutes, and the impact was immediate. Our support costs dropped by 50%, and customers receive answers instantly, 24/7.",
+    text: "We launched Adilm in just minutes, and the impact was immediate. Our support costs dropped by 50%, and customers receive answers instantly, 24/7.",
   },
   {
     avatar: author3,
     name: "Miguel Torres",
     title: "Director - Finexa Capital",
-    text: "Aivora’s powerful analytics give us deep insights into customer needs. We’ve optimized our chatbot flows and seen noticeable growth in conversions.",
+    text: "Adilm’s powerful analytics give us deep insights into customer needs. We’ve optimized our chatbot flows and seen noticeable growth in conversions.",
   },
 ];
 

@@ -36,10 +36,13 @@ export default function WowInit() {
     initWow();
 
     return () => {
-      if (timeout) clearTimeout(timeout);
-      if (wowRef.current?.sync) {
-        wowRef.current.sync();
+      if (timeout) {
+        clearTimeout(timeout);
       }
+
+      // Avoid calling WOW.sync() on unmount; it can
+      // touch detached nodes and throw runtime errors.
+      wowRef.current = null;
     };
   }, [pathname]);
 

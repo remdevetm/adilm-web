@@ -82,40 +82,59 @@ export default function HeaderClient() {
               </Link>
             </div>
 
-            {/* Desktop Menu */}
+            {/* Desktop Menu (original structure preserved) */}
             <div className="main-menu__wrap navbar navbar-expand-lg p-0">
               <nav className="main-menu collapse navbar-collapse">
                 <ul>
+                  {/* Home dropdown */}
                   <li className="menu-item-has-children active">
-                    <Link href="/">Home</Link>
+                    <Link href="/">
+                      Home
+                    </Link>
                     <ul className="submenu">
-                      <li><Link href="/">Ai Agency</Link></li>
-                      <li><Link href="/ai-marketing">Ai Marketing</Link></li>
-                      <li><Link href="/ai-chatbot">Ai Chatbot</Link></li>
+                      <li>
+                        <Link href="/">
+                          Ai Agency
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/ai-chatbot">
+                          Ai Chatbot
+                        </Link>
+                      </li>
                     </ul>
                   </li>
 
-                  <li><Link href="/about">About Us</Link></li>
-
+                  {/* Pages megamenu */}
                   <li className="menu-item-has-children megamenu">
-                    <Link href="#" onClick={preventDefault}>Pages</Link>
+                    <Link href="#" onClick={preventDefault}>
+                      Pages
+                    </Link>
                     <MegaMenu1 />
                   </li>
 
+                  {/* Services megamenu */}
                   <li className="menu-item-has-children megamenu">
-                    <Link href="#" onClick={preventDefault}>Services</Link>
+                    <Link href="#" onClick={preventDefault}>
+                      Services
+                    </Link>
                     <MegaMenuServices />
                   </li>
 
+                  {/* Blog with submenu */}
                   <li className="menu-item-has-children">
                     <Link href="/blog">Blog</Link>
                     <ul className="submenu">
-                      <li><Link href="/blog">Blog</Link></li>
-                      <li><Link href="/blog-details">Blog Details</Link></li>
+                      <li>
+                        <Link href="/blog">Blog</Link>
+                      </li>
                     </ul>
                   </li>
 
-                  <li><Link href="/contact">Contact Us</Link></li>
+                  {/* Contact */}
+                  <li>
+                    <Link href="/contact">Contact Us</Link>
+                  </li>
                 </ul>
               </nav>
             </div>

@@ -115,7 +115,7 @@ export default function FeatureSection() {
           <div className="sec-title sec-title--two custom-sec-title feature-sec-title text-center mb-45">
             <span className="sub-title">
               <Image src={subLeftIcon} alt="icon" width={24} height={24} />{" "}
-              Aivora AI Chatbot Features
+						Adilm AI Chatbot Features
             </span>
 
             <h2 className="title">

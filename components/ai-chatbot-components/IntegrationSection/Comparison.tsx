@@ -16,7 +16,7 @@ interface ComparisonItem {
 
 const COMPARISONS: ComparisonItem[] = [
   {
-    title: "Without Aivora AI chatbot",
+    title: "Without Adilm AI chatbot",
     icon: "❌",
     points: [
       "Losing customers from slow support",
@@ -28,7 +28,7 @@ const COMPARISONS: ComparisonItem[] = [
     ],
   },
   {
-    title: "With Aivora AI chatbot",
+    title: "With Adilm AI chatbot",
     icon: "✅",
     points: [
       "Instant 24/7 answers in 90+ languages",

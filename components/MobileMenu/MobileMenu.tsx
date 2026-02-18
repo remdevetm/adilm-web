@@ -15,55 +15,29 @@ interface MenuItem {
 const menus: MenuItem[] = [
   {
     id: 1,
-    title: "Home",
-    link: "/",
-    submenu: [
-      { id: 11, title: "AI Agency", link: "/" },
-      { id: 12, title: "AI Marketing", link: "/ai-marketing" },
-      { id: 13, title: "AI Chatbot", link: "/ai-chatbot" },
-    ],
+    title: "AI Chatbot",
+    link: "/ai-chatbot",
   },
   {
     id: 2,
-    title: "About",
-    link: "/about",
-  },
-  {
-    id: 3,
-    title: "Pages",
-    link: "#",
-    submenu: [
-      { id: 31, title: "Services", link: "/service" },
-      { id: 32, title: "Rag as a Service", link: "/service-details" },
-      { id: 33, title: "Career", link: "/career" },
-      { id: 34, title: "Career Details", link: "/career-details" },
-      { id: 35, title: "Our AI agents", link: "/project" },
-      { id: 36, title: "AI Agent Details", link: "/project-details" },
-      { id: 37, title: "Team", link: "/team" },
-    ],
-  },
-  {
-    id: 4,
     title: "Rag as a Service",
     link: "#",
     submenu: [
-      { id: 41, title: "AI SaaS Product", link: "/service-details" },
-      { id: 42, title: "Data & Intelligence", link: "/service-details" },
-      { id: 43, title: "AI for E-commerce", link: "/service-details" },
-      { id: 44, title: "AI Consulting", link: "/service-details" },
+      { id: 21, title: "Rag as a Service", link: "/service-details" },
     ],
+  },
+  {
+    id: 3,
+    title: "Our AI agents",
+    link: "/project",
+  },
+  {
+    id: 4,
+    title: "Blog",
+    link: "/blog",
   },
   {
     id: 5,
-    title: "Blog",
-    link: "/blog",
-    submenu: [
-      { id: 51, title: "Blog", link: "/blog" },
-      { id: 52, title: "Blog Details", link: "/blog-details" },
-    ],
-  },
-  {
-    id: 6,
     title: "Contact",
     link: "/contact",
   },

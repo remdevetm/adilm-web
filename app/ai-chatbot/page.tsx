@@ -13,7 +13,7 @@ import Footer from "@/components/ai-chatbot-components/Footer/Footer";
 import Scrollbar from "@/components/scrollbar/scrollbar";
 
 export const metadata = {
-  title: "AI Chatbot – Aivora – AI Agency & Technology",
+  title: "AI Chatbot – Adilm – AI Agency & Technology",
   description: "AI chatbot landing page built with Next.js.",
 };
 

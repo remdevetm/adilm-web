@@ -153,7 +153,7 @@ export default function Footer() {
 
           {/* COPYRIGHT */}
           <div className="xb-copyright ul_li_between">
-            <p>© 2025 <Link href="/ai-chatbot">Aivora</Link>, All rights reserved.</p>
+            <p>© 2025 <Link href="/ai-chatbot">Adilm</Link>, All rights reserved.</p>
             <ul className="ai-footer-links ul_li">
               <li><Link href="/contact">Terms & Conditions</Link></li>
               <li><Link href="/contact">Privacy Policy</Link></li>
@@ -165,7 +165,7 @@ export default function Footer() {
       {/* BOTTOM TITLE */}
       <div className="xb-footer-bottom-title">
         <h2 className="title">
-          Aivora AI <span>chatbot</span>
+          Adilm AI <span>chatbot</span>
           <Image src={diamondIcon} alt="icon" />
         </h2>
       </div>

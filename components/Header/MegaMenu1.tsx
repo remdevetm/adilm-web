@@ -26,20 +26,6 @@ export default function MegaMenu1() {
                   <div className="megamenu_pages_wrapper">
                     <div className="row g-10">
                       <div className="col-xl-4 col-lg-4">
-                        <Link className="iconbox_block_2" href="/service">
-                          <span className="icon_title_wrap">
-                            <small className="iconbox_icon">
-                              <Image src={icon1} alt="Service Icon" />
-                            </small>
-                            <small className="iconbox_title">Services</small>
-                          </span>
-                          <span className="description mb-0">
-                            Happy to help you!
-                          </span>
-                        </Link>
-                      </div>
-
-                      <div className="col-xl-4 col-lg-4">
                         <Link className="iconbox_block_2" href="/service-details">
                           <span className="icon_title_wrap">
                             <small className="iconbox_icon">
@@ -51,37 +37,6 @@ export default function MegaMenu1() {
                           </span>
                           <span className="description mb-0">
                             Production-ready RAG for your data.
-                          </span>
-                        </Link>
-                      </div>
-
-                      <div className="col-xl-4 col-lg-4">
-                        <Link className="iconbox_block_2" href="/career">
-                          <span className="icon_title_wrap">
-                            <span className="iconbox_icon">
-                              <Image src={icon3} alt="Career Icon" />
-                            </span>
-                            <small className="iconbox_title">Career</small>
-                            <span className="badge">We’re Hiring</span>
-                          </span>
-                          <span className="description mb-0">
-                            Open jobs to join our team.
-                          </span>
-                        </Link>
-                      </div>
-
-                      <div className="col-xl-4 col-lg-4">
-                        <Link className="iconbox_block_2" href="/career-details">
-                          <span className="icon_title_wrap">
-                            <span className="iconbox_icon">
-                              <Image src={icon2} alt="Career Details Icon" />
-                            </span>
-                            <small className="iconbox_title">
-                              Career details
-                            </small>
-                          </span>
-                          <span className="description mb-0">
-                            We are friendly — join our team.
                           </span>
                         </Link>
                       </div>
@@ -100,35 +55,7 @@ export default function MegaMenu1() {
                         </Link>
                       </div>
 
-                      <div className="col-xl-4 col-lg-4">
-                        <Link className="iconbox_block_2" href="/project-details">
-                          <span className="icon_title_wrap">
-                            <span className="iconbox_icon">
-                              <Image src={icon3} alt="AI Agent Details Icon" />
-                            </span>
-                            <small className="iconbox_title">
-                              AI Agent Details
-                            </small>
-                          </span>
-                          <span className="description mb-0">
-                            Explore our all case studies.
-                          </span>
-                        </Link>
-                      </div>
-
-                      <div className="col-xl-4 col-lg-4">
-                        <Link className="iconbox_block_2" href="/team">
-                          <span className="icon_title_wrap">
-                            <span className="iconbox_icon">
-                              <Image src={icon4} alt="Team Icon" />
-                            </span>
-                            <small className="iconbox_title">Our team</small>
-                          </span>
-                          <span className="description mb-0">
-                            We are friendly — join our team.
-                          </span>
-                        </Link>
-                      </div>
+                      {/* Only keep tiles that point to existing pages */}
                     </div>
 
                     {/* ---------- BUTTONS & REVIEWS ---------- */}

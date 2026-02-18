@@ -1,4 +1,4 @@
-import Header from "@/components/Header/Header";
+import HeaderThree from "@/components/HeaderThree/HeaderThree";
 import PageTitle from "@/components/pagetitle/PageTitle";
 import Scrollbar from "@/components/scrollbar/scrollbar";
 import Footer from "@/components/footer/Footer";
@@ -16,7 +16,7 @@ export default function ContactPage() {
   return (
     <div className="about-page inner-page contact-page">
       <div className="body_wrap o-clip">
-        <Header />
+        <HeaderThree />
 
         <main>
           <PageTitle pageTitle="Contact Us" pagesub="Contact Us" disableBgImage />

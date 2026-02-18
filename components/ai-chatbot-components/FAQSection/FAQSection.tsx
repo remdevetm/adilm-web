@@ -36,7 +36,7 @@ const FAQS: FAQItem[] = [
     id: 2,
     question: "How long does it take to train the chatbot?",
     answer:
-      "The setup is instant — once you provide your URL, Aivora begins training automatically. Within minutes, your chatbot is ready to answer real customer queries and continuously improve as it learns.",
+      "The setup is instant — once you provide your URL, Adilm begins training automatically. Within minutes, your chatbot is ready to answer real customer queries and continuously improve as it learns.",
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const FAQS: FAQItem[] = [
     id: 4,
     question: "Does it support languages other than English?",
     answer:
-      "Yes! Aivora supports 90+ languages, allowing your chatbot to communicate with customers globally in their preferred language.",
+      "Yes! Adilm supports 90+ languages, allowing your chatbot to communicate with customers globally in their preferred language.",
   },
   {
     id: 5,

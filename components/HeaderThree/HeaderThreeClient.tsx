@@ -91,7 +91,7 @@ export default function HeaderThreeClient() {
                         {/* LOGO */}
                         <div className="xb-header-logo">
                             <Link href="/" className="logo1">
-                                <Image src={logo} alt="Aivora Logo" />
+                                <Image src={logo} alt="Adilm Logo" />
                             </Link>
                         </div>
 
@@ -99,51 +99,28 @@ export default function HeaderThreeClient() {
                         <div className="main-menu__wrap navbar navbar-expand-lg p-0">
                             <nav className="main-menu collapse navbar-collapse">
                                 <ul>
-                                    <li className="menu-item-has-children active">
-                                        <Link href="/">
-                                            <span>Home</span>
+                                    <li className="active">
+                                        <Link href="/ai-chatbot">
+                                            <span>AI Chatbot</span>
                                         </Link>
-                                        <ul className="submenu">
-                                            <li>
-                                                <Link href="/">
-                                                    <span>AI Agency</span>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/ai-marketing">
-                                                    <span>AI Marketing</span>
-                                                </Link>
-                                            </li>
-                                            <li className="active">
-                                                <Link href="/ai-chatbot">
-                                                    <span>AI Chatbot</span>
-                                                </Link>
-                                            </li>
-                                        </ul>
                                     </li>
 
                                     <li>
-                                        <a className="scrollspy-btn" href="#features">
-                                            <span>Features</span>
-                                        </a>
+                                        <Link href="/service-details">
+                                            <span>Rag as a Service</span>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a className="scrollspy-btn" href="#process">
-                                            <span>Process</span>
-                                        </a>
+                                        <Link href="/project">
+                                            <span>Our AI agents</span>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a className="scrollspy-btn" href="#integration">
-                                            <span>Integration</span>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a className="scrollspy-btn" href="#pricing">
-                                            <span>Pricing</span>
-                                        </a>
+                                        <Link href="/blog">
+                                            <span>Blog</span>
+                                        </Link>
                                     </li>
 
                                     <li>
@@ -275,31 +252,31 @@ export default function HeaderThreeClient() {
 
                                 <div className="xb-logo-mobile xb-hide-xl">
                                     <Link href="/" rel="home">
-                                        <Image src={logo} alt="Aivora Logo" />
+                                        <Image src={logo} alt="Adilm Logo" />
                                     </Link>
                                 </div>
 
                                 <nav className="xb-header-nav">
                                     <ul className="xb-menu-primary clearfix">
                                         <li>
-                                            <a className="scrollspy-btn" href="#features">
-                                                <span>Features</span>
-                                            </a>
+                                            <Link href="/ai-chatbot">
+                                                <span>AI Chatbot</span>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a className="scrollspy-btn" href="#process">
-                                                <span>Process</span>
-                                            </a>
+                                            <Link href="/service-details">
+                                                <span>Rag as a Service</span>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a className="scrollspy-btn" href="#integration">
-                                                <span>Integration</span>
-                                            </a>
+                                            <Link href="/project">
+                                                <span>Our AI agents</span>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a className="scrollspy-btn" href="#pricing">
-                                                <span>Pricing</span>
-                                            </a>
+                                            <Link href="/blog">
+                                                <span>Blog</span>
+                                            </Link>
                                         </li>
                                         <li>
                                             <Link href="/contact">
