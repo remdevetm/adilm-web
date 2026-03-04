@@ -74,8 +74,8 @@ export default function HeaderTwoClient() {
 
                         {/* Logo */}
                         <div className="xb-header-logo">
-                            <Link href="/" className="logo1">
-                                <Image src={logo} alt="Aivora Logo" priority />
+                            <Link href="/" className="logo1" style={{marginRight: 'auto', marginLeft: 0, paddingLeft: 0}}>
+                                <Image src={logo} alt="Aivora Logo" width={300} height={68} priority />
                             </Link>
                         </div>
 
@@ -212,8 +212,8 @@ export default function HeaderTwoClient() {
                                 <div className="xb-menu-close xb-hide-xl xb-close" onClick={closeMobileMenu} />
 
                                 <div className="xb-logo-mobile xb-hide-xl">
-                                    <Link href="/">
-                                        <Image src={logo} alt="Aivora Logo" />
+                                    <Link href="/" style={{marginRight: 'auto', marginLeft: 0, paddingLeft: 0}}>
+                                        <Image src={logo} alt="Aivora Logo" width={300} height={68} />
                                     </Link>
                                 </div>
 

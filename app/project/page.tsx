@@ -1,4 +1,4 @@
-import Header from "@/components/Header/Header";
+import HeaderThree from "@/components/HeaderThree/HeaderThree";
 import PageTitle from "@/components/pagetitle/PageTitle";
 import Scrollbar from "@/components/scrollbar/scrollbar";
 import Footer from "@/components/footer/Footer";
@@ -14,7 +14,7 @@ export default function ProjectPage() {
   return (
     <div className="service-page inner-page project-page adilm-ci">
       <div className="body_wrap o-clip">
-        <Header />
+        <HeaderThree />
 
         <main>
           <PageTitle

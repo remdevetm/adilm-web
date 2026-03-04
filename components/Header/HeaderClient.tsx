@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import logo from "@/public/images/logo/logo.svg";
+import logo from "@/public/images/logo/logo-two.svg";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import MegaMenu1 from "./MegaMenu1";
 import MegaMenuServices from "./MegaMenu2";
@@ -76,9 +76,9 @@ export default function HeaderClient() {
           <div className="header__wrap ul_li_between">
 
             {/* Logo */}
-            <div className="xb-header-logo">
+            <div className="xb-header-logo" style={{marginRight: 'auto', marginLeft: 0, paddingLeft: 0}}>
               <Link href="/" className="logo1">
-                <Image src={logo} alt="Logo" priority />
+                <Image src={logo} alt="Logo" width={300} height={68} priority />
               </Link>
             </div>
 

@@ -35,3 +35,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# sensitive test/config scripts (reference process.env secrets or contain hardcoded creds)
+test-openai-key.js
+test-gemini-key.js
+test-azure-storage.js
+test-blog-e2e.js
+testOpenAI.js
+fix-blob-access.js
+createBlogCollection.js

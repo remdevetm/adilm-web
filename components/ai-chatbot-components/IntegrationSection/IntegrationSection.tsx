@@ -81,7 +81,7 @@ export default function IntegrationComparisonSection() {
           <div className="row mt-none-30 align-items-center">
 
             {/* LEFT CONTENT */}
-            <div className="col-lg-6 mt-30">
+            <div className="col-lg-6 mt-30" style={{ paddingLeft: "60px" }}>
               <div className="integration-content">
                 <div className="sec-title sec-title--two process-title mb-10">
                   <span className="sub-title d-block mb-30">
@@ -128,7 +128,7 @@ export default function IntegrationComparisonSection() {
                               gradientTransform="matrix(-667.5 -25 0.582116 -49.7476 497 39)"
                               gradientUnits="userSpaceOnUse"
                             >
-                              <stop offset="0" stopColor="#00FF97" />
+                              <stop offset="0" stopColor="#3f5f50" />
                               <stop offset="1" stopColor="#00020F" stopOpacity="0" />
                             </radialGradient>
                           </defs>

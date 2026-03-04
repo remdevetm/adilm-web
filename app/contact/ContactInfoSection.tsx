@@ -15,7 +15,7 @@ const contactData = [
   {
     location: "Cnr Tyrwhitt & 24 Cradock Ave, Rosebank, JHB, 2196",
     phone: "+27 67 224 8032",
-    email: "john.kitenge@webparam.org",
+    email: "John@adilm.ai",
     img: img01,
   },
 ];
@@ -48,7 +48,7 @@ export default function ContactInfoSection() {
                     <p className="xb-item--location">{item.location}</p>
 
                     <span className="xb-item--contact_info">{item.phone}</span>
-                    <span className="xb-item--contact_info">{item.email}</span>
+                    <span className="xb-item--contact_info">John@adilm.ai</span>
 
                     <Link href="/contact" className="thm-btn form-btn mt-45">
                       VIEW LOCATION

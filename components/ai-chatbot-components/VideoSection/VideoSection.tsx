@@ -33,10 +33,10 @@ import tabImg4 from "@/public/images/video/img04.jpg";
 ================================ */
 
 const TABS = [
-  { id: "dashboard", label: "Dashboard", icon: dashboardIcon, img: tabImg1 },
-  { id: "document", label: "Document", icon: documentIcon, img: tabImg2 },
-  { id: "sheet", label: "Sheet", icon: sheetIcon, img: tabImg3 },
-  { id: "whiteboard", label: "Whiteboard", icon: whiteboardIcon, img: tabImg4 },
+  { id: "dashboard", label: "Voice AI", icon: dashboardIcon, img: tabImg1 },
+  { id: "document", label: "Rag as a Service", icon: documentIcon, img: tabImg2 },
+  { id: "sheet", label: "Analytics", icon: sheetIcon, img: tabImg3 },
+  { id: "whiteboard", label: "AI Agents", icon: whiteboardIcon, img: tabImg4 },
 ];
 
 /* =============================== */
@@ -116,16 +116,6 @@ export default function VideoSection() {
         </div>
       </div>
 
-      {/* LINEAR GRADIENT */}
-      <div className="xb-linear-gradient">
-        <span className="gradient gradient--1"></span>
-        <span className="gradient gradient--2"></span>
-        <span className="gradient gradient--3"></span>
-        <span className="gradient gradient--4"></span>
-        <span className="gradient gradient--dot-img">
-          <Image src={shape4} alt="dot shape" width={180} height={180} />
-        </span>
-      </div>
 
       {/* TEXT MARQUEE */}
       <Marquee

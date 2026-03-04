@@ -7,7 +7,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-import logo from "@/public/images/logo/logo.svg";
+import logo from "@/public/images/logo/logo-two.svg";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -80,7 +80,7 @@ export default function HeaderThreeClient() {
 
     /* ================= RENDER ================= */
     return (
-        <header id="xb-header-area" className="header-area header-style--two header-transparent">
+        <header id="xb-header-area" className="header-area header-style--one header-transparent">
             <div
                 className={`xb-header stricky ${isSticky ? "xb-header-area-sticky" : ""
                     } ${isVisible ? "xb-header-fixed" : "xb-header-hidden"}`}
@@ -90,8 +90,8 @@ export default function HeaderThreeClient() {
 
                         {/* LOGO */}
                         <div className="xb-header-logo">
-                            <Link href="/" className="logo1">
-                                <Image src={logo} alt="Adilm Logo" />
+                            <Link href="/" className="logo1" style={{marginRight: 'auto', marginLeft: 0, paddingLeft: 0}}>
+                                <Image src={logo} alt="Adilm Logo" width={400} height={68} priority />
                             </Link>
                         </div>
 
@@ -224,7 +224,7 @@ export default function HeaderThreeClient() {
                                                         gradientTransform="matrix(-667.5 -25 0.582116 -49.7476 497 39)"
                                                         gradientUnits="userSpaceOnUse"
                                                     >
-                                                        <stop offset="0" stopColor="#00FF97" />
+                                                        <stop offset="0" stopColor="#3f5f50" />
                                                         <stop offset="1" stopColor="#00020F" stopOpacity="0" />
                                                     </radialGradient>
                                                 </defs>

@@ -36,6 +36,24 @@ const STEPS = [
   { number: "03", title: "Analyze & Optimize", img: processImg03 },
 ];
 
+const RIGHT_ITEMS = [
+  {
+    title: "Upload File",
+    description: "Easily upload your documents to get started.",
+    img: processImg02,
+  },
+  {
+    title: "Customize Workflows",
+    description: "Tailor the chatbot experience to your business needs.",
+    img: processImg03,
+  },
+  {
+    title: "Get Insights",
+    description: "Access analytics and reports to optimize performance.",
+    img: processImg04,
+  },
+];
+
 /* ================================ */
 
 export default function ProcessSection() {
@@ -89,7 +107,7 @@ export default function ProcessSection() {
                             gradientTransform="matrix(-667.5 -25 0.582116 -49.7476 497 39)"
                             gradientUnits="userSpaceOnUse"
                           >
-                            <stop offset="0" stopColor="#00FF97" />
+                            <stop offset="0" stopColor="#3f5f50" />
                             <stop offset="1" stopColor="#00020F" stopOpacity="0" />
                           </radialGradient>
                         </defs>
@@ -107,7 +125,6 @@ export default function ProcessSection() {
                 >
                   <div className="xb-img">
                     <Image src={step.img} alt={step.title} />
-                    <h2 className="step-number">{step.number}</h2>
                   </div>
                   <h2 className="step-name">{step.title}</h2>
                 </div>
@@ -121,10 +138,14 @@ export default function ProcessSection() {
               className="xb-process-right-container pb-150 mt-none-30 wow fadeInRight"
               data-wow-duration="600ms"
             >
-              {[processImg02, processImg03, processImg04].map((img, i) => (
+              {RIGHT_ITEMS.map((item, i) => (
                 <div className="xb-process-item mt-30" key={i}>
                   <div className="xb-img">
-                    <Image src={img} alt={`Process ${i + 1}`} />
+                    <Image src={item.img} alt={item.title} />
+                  </div>
+                  <div className="xb-process-item-text">
+                    <h3 className="xb-process-item-title">{item.title}</h3>
+                    <p className="xb-process-item-desc">{item.description}</p>
                   </div>
                 </div>
               ))}

@@ -3,7 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'newkhumlablobstorage.blob.core.windows.net',
+      },
+    ],
   },
 
   experimental: {

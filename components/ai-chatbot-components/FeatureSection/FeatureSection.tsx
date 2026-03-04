@@ -5,14 +5,12 @@ import subLeftIcon from "@/public/images/icon/sub-left-icon.png";
 import aiGif from "@/public/images/icon/artificial-intelligence-11761.gif";
 
 import featureImg01 from "@/public/images/feature/feature-img03.png";
-import featureLogo from "@/public/images/feature/logo.png";
-import featureImg02 from "@/public/images/feature/feature-img02.png";
-import scanImg from "@/public/images/feature/scan.png";
+import featureLogo from "@/public/images/feature/logo1.png";
+import featureImg02 from "@/public/images/feature/feature-img02.jpeg";
 import featureImg03 from "@/public/images/feature/feature-img04.png";
 import circleImg from "@/public/images/feature/circle.png";
 import featureImg04 from "@/public/images/feature/feature-img05.png";
 import featureImg05 from "@/public/images/feature/feature-img06.png";
-import securityImg from "@/public/images/feature/security.png";
 
 import BrandSection from "./BrandSection";
 
@@ -112,16 +110,8 @@ export default function FeatureSection() {
       {/* ================= FEATURE SECTION ================= */}
       <section id="features" className="feature pb-155">
         <div className="container">
-          <div className="sec-title sec-title--two custom-sec-title feature-sec-title text-center mb-45">
-            <span className="sub-title">
-              <Image src={subLeftIcon} alt="icon" width={24} height={24} />{" "}
-						Adilm AI Chatbot Features
-            </span>
-
+          <div className="sec-title sec-title--two custom-sec-title feature-sec-title mb-45">
             <h2 className="title">
-              <span>
-                <Image src={aiGif} alt="AI Animation" width={60} height={60} />
-              </span>
               Build the perfect customer-facing AI agent
             </h2>
 
@@ -153,7 +143,7 @@ export default function FeatureSection() {
                         gradientTransform="matrix(-667.5 -25 0.582116 -49.7476 497 39)"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop offset="0" stopColor="#00FF97" />
+                        <stop offset="0" stopColor="#3f5f50" />
                         <stop offset="1" stopColor="#00020F" stopOpacity="0" />
                       </radialGradient>
                     </defs>
@@ -171,9 +161,6 @@ export default function FeatureSection() {
                 <div className="xb-item--inner xb-border">
                   <div className="xb-img">
                     <Image src={featureImg01} alt="Automate" width={600} height={500} />
-                    <span className="logo">
-                      <Image src={featureLogo} alt="logo" width={100} height={100} />
-                    </span>
                   </div>
                   <div className="xb-item--holder">
                     <h2 className="xb-item--title">Automate with smart chatbot</h2>
@@ -191,9 +178,6 @@ export default function FeatureSection() {
                 <div className="xb-item--inner xb-border">
                   <div className="xb-img">
                     <Image src={featureImg02} alt="Sync Data" width={300} height={250} />
-                    <span className="scan-img updown-2">
-                      <Image src={scanImg} alt="scan" width={80} height={80} />
-                    </span>
                   </div>
                   <div className="xb-item--holder">
                     <h2 className="xb-item--title">Sync with real-time data</h2>
@@ -245,10 +229,6 @@ export default function FeatureSection() {
                 <div className="xb-item--inner xb-border">
                   <div className="xb-img">
                     <Image src={featureImg05} alt="Security" width={300} height={250} />
-                    <span className="security">
-                      <Image src={securityImg} alt="security" width={80} height={80} />
-                    </span>
-
                     <span className="animated-dot">
                       <span className="dot">{DOTS}</span>
                     </span>

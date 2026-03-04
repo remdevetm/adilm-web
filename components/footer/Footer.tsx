@@ -38,7 +38,7 @@ const TwitterIcon = () => (
   <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
     <path
       d="M9.46973 0C14.6996 0 18.9395 4.25357 18.9395 9.5C18.9394 14.7464 14.6996 19 9.46973 19C4.24002 18.9998 8.74258e-05 14.7463 0 9.5C0 4.25366 4.23997 0.000150177 9.46973 0ZM8.27441 10.1201L4.02344 15.0771H4.98438L8.70117 10.7422L11.6709 15.0771H14.9131L10.5039 8.64062L14.5586 3.91309H13.5977L10.0771 8.01758L7.26562 3.91309H4.02344L8.27441 10.1201ZM13.5977 14.3848H12.1221L5.33008 4.63867H6.80566L13.5977 14.3848Z"
-      fill="#FFF"
+      fill="currentColor"
     />
   </svg>
 );
@@ -53,7 +53,7 @@ const YoutubeIcon = () => <i className="fa-brands fa-square-youtube"></i>;
 const socials = [
   { icon: <FacebookIcon />, name: "Facebook", url: "https://facebook.com" },
   { icon: <TwitterIcon />, name: "Twitter", url: "https://twitter.com" },
-  { icon: <LinkedinIcon />, name: "LinkedIn", url: "https://linkedin.com" },
+  { icon: <LinkedinIcon />, name: "LinkedIn", url: "https://www.linkedin.com/company/web-param/" },
   { icon: <YoutubeIcon />, name: "YouTube", url: "https://youtube.com" },
 ];
 
@@ -69,9 +69,9 @@ export default function Footer() {
         <div className="xb-footer-heading wow zoomIn" data-wow-duration="600ms">
           <h1 className="title">Adilm</h1>
 
-          <a className="mail" href="mailto:john.kitenge@webparam.org">
+          <a className="mail" href="mailto:John@adilm.ai">
             <Image src={emailIcon} alt="email" />
-            john.kitenge@webparam.org
+            John@adilm.ai
           </a>
         </div>
 

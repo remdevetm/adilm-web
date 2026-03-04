@@ -1,4 +1,4 @@
-import Header from "@/components/Header/Header";
+import HeaderThree from "@/components/HeaderThree/HeaderThree";
 import PageTitle from "@/components/pagetitle/PageTitle";
 import Footer from "@/components/footer/Footer";
 import Scrollbar from "@/components/scrollbar/scrollbar";
@@ -12,7 +12,7 @@ export default function NotFound() {
   return (
     <div className="about-page inner-page">
       <div className="body_wrap o-clip">
-        <Header />
+        <HeaderThree />
 
         <main>
           <PageTitle pageTitle="Error 404" pagesub="404" />

@@ -42,12 +42,12 @@ export default function ContactPage() {
                   <ContactForm />
                 </div>
 
-                {/* GOOGLE MAP */}
+                {/* GOOGLE MAP - Cnr Tyrwhitt & 24 Cradock Ave, Rosebank, JHB, 2196 */}
                 <div className="google-map">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14602.254272231177!2d90.3654215!3d23.7985508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1592852423971!5m2!1sen!2sbd"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3580.98!2d28.0414!3d-26.1459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1710000000!5m2!1sen!2sza"
                     loading="lazy"
-                    title="Google Map"
+                    title="Adilm office - Cnr Tyrwhitt & 24 Cradock Ave, Rosebank, JHB"
                     referrerPolicy="no-referrer-when-downgrade"
                     style={{ width: "100%", height: "100%", border: 0 }}
                     allowFullScreen

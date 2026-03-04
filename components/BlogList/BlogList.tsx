@@ -1,47 +1,99 @@
+"use client";
 import BlogSlider from "./BlogTopList";
 import BlogSidebar from "../BlogSidebar/BlogSidebar";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-// IMPORT ALL BLOG IMAGES
-import blog05 from "@/public/images/blog/img05.jpg";
-import blog06 from "@/public/images/blog/img06.jpg";
-import blog07 from "@/public/images/blog/img07.jpg";
-
-const Icons = {
-  arrow: (
-    <>
-      <svg width="20" height="19" viewBox="0 0 20 19" fill="none">
-        <rect x="3.783" y="13.463" width="14.31" height="1.817" transform="rotate(-40.2798 3.783 13.463)" fill="white" />
-        <rect x="5.807" y="4.605" width="1.817" height="1.817" transform="rotate(-40.2798 5.807 4.605)" fill="white" />
-        <rect x="8.367" y="4.816" width="1.817" height="1.817" transform="rotate(-40.2798 8.367 4.816)" fill="white" />
-        <rect x="10.926" y="5.028" width="1.817" height="1.817" transform="rotate(-40.2798 10.926 5.028)" fill="white" />
-        <rect x="13.277" y="7.8" width="1.817" height="1.817" transform="rotate(-40.2798 13.277 7.8)" fill="white" />
-        <rect x="13.066" y="10.361" width="1.817" height="1.817" transform="rotate(-40.2798 13.066 10.361)" fill="white" />
-        <rect x="12.855" y="12.922" width="1.817" height="1.817" transform="rotate(-40.2798 12.855 12.922)" fill="white" />
-      </svg>
-
-      <svg width="20" height="19" viewBox="0 0 20 19" fill="none">
-        <rect x="3.783" y="13.463" width="14.31" height="1.817" transform="rotate(-40.2798 3.783 13.463)" fill="white" />
-        <rect x="5.807" y="4.605" width="1.817" height="1.817" transform="rotate(-40.2798 5.807 4.605)" fill="white" />
-        <rect x="8.367" y="4.816" width="1.817" height="1.817" transform="rotate(-40.2798 8.367 4.816)" fill="white" />
-        <rect x="10.926" y="5.028" width="1.817" height="1.817" transform="rotate(-40.2798 10.926 5.028)" fill="white" />
-        <rect x="13.277" y="7.8" width="1.817" height="1.817" transform="rotate(-40.2798 13.277 7.8)" fill="white" />
-        <rect x="13.066" y="10.361" width="1.817" height="1.817" transform="rotate(-40.2798 13.066 10.361)" fill="white" />
-        <rect x="12.855" y="12.922" width="1.817" height="1.817" transform="rotate(-40.2798 12.855 12.922)" fill="white" />
-      </svg>
-    </>
-  ),
+type BlogPost = {
+  _id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  bodyMarkdown?: string;
+  tags?: string[];
+  seoDescription?: string;
+  status?: string;
+  publishAt?: string;
+  createdBy?: string;
+  createdAt?: string;
+  imageUrl: string;
 };
 
 export default function BlogList() {
-  const blogPosts = [
-    { title: "How AI is Transforming Businesses Across Industries", link: "/blog-details" },
-    { title: "Getting started with AI Beginner Guide for Business Leaders", link: "/blog-details" },
-    { title: "The Future of Work: How AI is Changing the Way We Work", link: "/blog-details" },
-    { title: "How Artificial Intelligence Drives Decision-Making", link: "/blog-details" },
-    { title: "Exploring AI Integration in Modern Business Solutions", link: "/blog-details" },
-    { title: "Revolutionizing Industries with the Power of AI", link: "/blog-details" },
-  ];
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch("/api/posts");
+        if (!res.ok) throw new Error("no api");
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+          setPosts(data);
+        } else {
+          // fallback posts if API missing or empty
+          setPosts([
+            {
+              _id: "rag-1",
+              title: "What is RAG? The Secret to Fact-Checking Your AI",
+              slug: "what-is-rag",
+              excerpt:
+                "RAG gives AI a search engine for your data — search, read, and answer from trusted documents.",
+              imageUrl: "/images/service/img14.jpg",
+            },
+            {
+              _id: "rag-2",
+              title: "What is RAG-as-a-Service (RAGaaS)?",
+              slug: "rag-as-a-service",
+              excerpt:
+                "RAGaaS is the easy, cloud-hosted option — upload documents, call an API, deploy assistants.",
+              imageUrl: "/images/service/img15.jpg",
+            },
+            {
+              _id: "rag-3",
+              title: "4 Reasons Why Your Business Needs RAG-as-a-Service",
+              slug: "benefits-of-rag-as-a-service",
+              excerpt:
+                "Zero maintenance, instant scale, enterprise security, and faster time-to-market.",
+              imageUrl: "/images/service/img16.jpg",
+            },
+          ]);
+        }
+      } catch (e) {
+        // API not available — use local fallback posts
+        setPosts([
+          {
+            _id: "rag-1",
+            title: "What is RAG? The Secret to Fact-Checking Your AI",
+            slug: "what-is-rag",
+            excerpt:
+              "RAG gives AI a search engine for your data — search, read, and answer from trusted documents.",
+            imageUrl: "/images/service/img14.jpg",
+          },
+          {
+            _id: "rag-2",
+            title: "What is RAG-as-a-Service (RAGaaS)?",
+            slug: "rag-as-a-service",
+            excerpt:
+              "RAGaaS is the easy, cloud-hosted option — upload documents, call an API, deploy assistants.",
+            imageUrl: "/images/service/img15.jpg",
+          },
+          {
+            _id: "rag-3",
+            title: "4 Reasons Why Your Business Needs RAG-as-a-Service",
+            slug: "benefits-of-rag-as-a-service",
+            excerpt:
+              "Zero maintenance, instant scale, enterprise security, and faster time-to-market.",
+            imageUrl: "/images/service/img16.jpg",
+          },
+        ]);
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
+
   return (
     <div>
       <BlogSlider />
@@ -50,20 +102,30 @@ export default function BlogList() {
           <div className="row mt-none-50 g-0 align-items-start">
             <div className="col-lg-8 mt-50">
               <div className="blog_details_content">
-                {blogPosts.map((post, idx) => (
-                  <div className="blog_details_item xb-border" key={idx}>
-                    <div className="xb-item--inner">
-                      <h3 className="xb-item--title border-effect-2">
-                        <Link href={post.link}>{post.title}</Link>
-                      </h3>
-                      <div className="xb-item--button mt-40">
-                        <Link className="thm-btn agency-btn" href={post.link}>
-                          <span className="text">Read more</span>
-                        </Link>
+                {loading ? (
+                  <div>Loading...</div>
+                ) : posts.length === 0 ? (
+                  <div>No posts found.</div>
+                ) : (
+                  posts.map((post) => (
+                    <div className="blog_details_item xb-border" key={post._id}>
+                      <div className="xb-item--inner">
+                        {post.imageUrl && (
+                          <img src={post.imageUrl} alt={post.title} style={{ maxWidth: "100%", marginBottom: 16 }} />
+                        )}
+                        <h3 className="xb-item--title border-effect-2">
+                          <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                        </h3>
+                        <p>{post.excerpt}</p>
+                        <div className="xb-item--button mt-40">
+                          <Link className="thm-btn agency-btn" href={`/blog/${post.slug}`}>
+                            <span className="text">Read more</span>
+                          </Link>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))
+                )}
               </div>
             </div>
             {/* SIDEBAR */}
@@ -73,4 +135,4 @@ export default function BlogList() {
       </section>
     </div>
   );
-};
+}

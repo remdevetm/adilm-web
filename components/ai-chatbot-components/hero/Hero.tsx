@@ -4,12 +4,12 @@ import Image from "next/image";
 // Images
 import heroBg from "@/public/images/bg/hero_bg02.jpg";
 import heroImg from "@/public/images/hero/hero-img01.png";
-import textImg1 from "@/public/images/hero/text-img01.png";
-import textImg2 from "@/public/images/hero/text-img02.png";
-import textImg3 from "@/public/images/hero/text-img03.png";
-import textImg4 from "@/public/images/hero/text-img04.png";
-import textImg5 from "@/public/images/hero/text-img05.png";
-import glassyEffect from "@/public/images/hero/glassy-effect-img.png";
+import glassyEffectImg from "@/public/images/hero/glassy-effect-img.png";
+import textImg01 from "@/public/images/hero/text-img01.png";
+import textImg02 from "@/public/images/hero/text-img02.png";
+import textImg03 from "@/public/images/hero/text-img03.png";
+import textImg04 from "@/public/images/hero/text-img04.png";
+import textImg05 from "@/public/images/hero/text-img05.png";
 
 /* ================================
    Static Constants
@@ -91,7 +91,7 @@ export default function HeroSection() {
                           r="1"
                           gradientTransform="matrix(-667 -25 0.58 -49.7 497 39)"
                         >
-                          <stop offset="0" stopColor="#00FF97" />
+                          <stop offset="0" stopColor="#3f5f50" />
                           <stop offset="1" stopColor="#00020F" stopOpacity="0" />
                         </radialGradient>
                       </defs>
@@ -106,33 +106,27 @@ export default function HeroSection() {
           <div className="col-lg-6">
             <div className="hero-img-container">
 
+              {/* Left chat bubbles */}
+              <div className="xb-text-left animated">
+                <Image className="img" src={textImg01} alt="Chat question 1" />
+                <Image className="img img--2" src={textImg02} alt="Chat question 2" />
+              </div>
+
+              {/* Main hero image */}
               <div className="xb-img" data-wow-duration="800ms">
-                <Image src={heroImg} alt="AI Chatbot" priority />
+                <Image className="hero-main-img" src={heroImg} alt="AI Chatbot" priority />
               </div>
 
-              <div className="xb-text-left wow updown">
-                <div className="img img--1">
-                  <Image src={textImg1} alt="text-img1" />
-                </div>
-                <div className="img img--2">
-                  <Image src={textImg2} alt="text-img2" />
-                </div>
+              {/* Glassy effect overlay */}
+              <div className="xb-glassy-effect-img animated">
+                <Image src={glassyEffectImg} alt="Glassy effect" />
               </div>
 
-              <div className="xb-glassy-effect-img wow">
-                <Image src={glassyEffect} alt="Glassy Effect" />
-              </div>
-
-              <div className="xb-text-right wow updown">
-                <div className="img img--1">
-                  <Image src={textImg3} alt="text-img3" />
-                </div>
-                <div className="img img--2">
-                  <Image src={textImg4} alt="text-img4" />
-                </div>
-                <div className="img img--3">
-                  <Image src={textImg5} alt="text-img5" />
-                </div>
+              {/* Right chatbot messages */}
+              <div className="xb-text-right animated">
+                <Image className="img" src={textImg03} alt="Aivora agent" />
+                <Image className="img img--2" src={textImg04} alt="Chat message" />
+                <Image className="img img--3" src={textImg05} alt="Typing indicator" />
               </div>
 
             </div>
