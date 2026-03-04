@@ -90,8 +90,8 @@ export default function HeaderThreeClient() {
 
                         {/* LOGO */}
                         <div className="xb-header-logo">
-                            <Link href="/" className="logo1" style={{marginRight: 'auto', marginLeft: 0, paddingLeft: 0}}>
-                                <Image src={logo} alt="Adilm Logo" width={400} height={68} priority />
+                            <Link href="/" className="logo1" style={{marginRight: 'auto', marginLeft: -90, paddingLeft: 0}}>
+                                <Image src={logo} alt="Adilm Logo" width={440} height={68} priority />
                             </Link>
                         </div>
 

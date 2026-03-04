@@ -6,12 +6,6 @@ import CommentForm from "./CommentForm";
 import NewsletterBox from "./NewsletterBox";
 import BlogSidebar from "../BlogSidebar/BlogSidebar";
 
-// IMAGE IMPORTS
-import blog08 from "@/public/images/blog/img08.jpg";
-import blog09 from "@/public/images/blog/img09.jpg";
-import blog10 from "@/public/images/blog/img10.jpg";
-import blog11 from "@/public/images/blog/img11.jpg";
-
 import avatar1 from "@/public/images/avatar/author-img.png";
 import RelatedBlog from "./RelatedBlog";
 import Link from "next/link";
@@ -22,11 +16,6 @@ export default function BlogDetailsSection() {
   return (
     <section className="blog_details_section pt-70">
       <div className="container">
-
-        {/* MAIN IMAGE */}
-        <div className="single-item-image mb-70">
-          <Image src={blog08} alt="Blog" />
-        </div>
 
         {/* HEADER META */}
         <ItemDetailsContent />
@@ -50,19 +39,6 @@ export default function BlogDetailsSection() {
               <h3 className="item_details_info_heading mb-35">
                 AI insights that turn complex data into <br /> clear, confident business actions.
               </h3>
-
-              <div className="row mb-35 mt-none-30">
-                <div className="col-md-6 col-sm-6 mt-30">
-                  <div className="single-item-image">
-                    <Image src={blog09} alt="Blog" />
-                  </div>
-                </div>
-                <div className="col-md-6 col-sm-6 mt-30">
-                  <div className="single-item-image">
-                    <Image src={blog10} alt="Blog" />
-                  </div>
-                </div>
-              </div>
 
               <p>
                 At our AI agency, we specialize in delivering next-generation automation tools that help businesses operate smarter, faster, and more efficiently. In today’s fast-paced digital environment, companies are constantly challenged to reduce manual workloads, cut costs, and make faster, data-driven decisions. Our intelligent automation solutions are designed to tackle these challenges head-on. From automating repetitive tasks and streamlining workflows to integrating predictive analytics and real-time data processing, our tools empower to transform how they function at every level.
@@ -92,13 +68,9 @@ export default function BlogDetailsSection() {
                 Automating repetitive tasks with intelligent AI tools allows businesses to save time, reduce errors, and focus on higher-value work. Instead of relying on manual input for routine processes like data entry, report generation, or customer queries, intelligent automation uses machine learning and smart algorithms to handle them efficiently. These systems learn patterns, adapt to changes, and operate 24/7—ensuring consistency and speed. As a result, teams become more productive, workflows become more streamlined, and businesses can scale without increasing overhead.
               </p>
 
-              {/* IMAGE + LIST */}
+              {/* LIST */}
               <div className="row mb-45 align-items-center mt-none-30">
-                <div className="col-md-6 mt-30">
-                  <Image src={blog11} alt="Blog" className="single-item-image" />
-                </div>
-
-                <div className="col-md-6 mt-30">
+                <div className="col-md-12 mt-30">
                   <ul className="iconlist_block">
                     <li><span className="iconlist_text">Automated Task Detection.</span></li>
                     <li><span className="iconlist_text">24/7 Autonomous Execution.</span></li>

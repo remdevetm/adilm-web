@@ -455,6 +455,32 @@ span {
   box-shadow: var(--eco-shadow-soft);
 }
 
+
+/* All feature cards: image is part of the card (no separate container), 28px padding */
+.ai-chatbot-page .xb-feature-item-3 .xb-img {
+  padding: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+  box-shadow: none;
+}
+.ai-chatbot-page .xb-feature-item-3 .xb-img img {
+  object-fit: contain;
+  width: 100% !important;
+  max-width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
 .ai-chatbot-page .integration-container {
   background: rgba(255, 255, 255, 0.72) !important;
   box-shadow: var(--eco-shadow-soft);
@@ -8261,6 +8287,12 @@ Drop Down menu end
 .xb-process-step .xb-img {
   position: relative;
   box-shadow: 0 4px 24px -1px rgba(28, 9, 61, 0.2);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  overflow: hidden;
 }
 
 .xb-process-step .xb-img .step-number {
@@ -11320,6 +11352,24 @@ Drop Down menu end
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   box-shadow: 0 4px 24px -1px rgba(28, 9, 61, 0.2);
+}
+
+.xb-feature-item-3.big-item .xb-img {
+  padding: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.xb-feature-item-3.big-item .xb-img img {
+  width: 100% !important;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .xb-feature-item-3 .xb-img img {
@@ -17218,6 +17268,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s cubic-bezier(0.55, 0.085, 0, 0.99);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
 }
 
 .hero-img-container .xb-text-left .img:not(:last-child) {
@@ -17283,6 +17335,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
   transition-delay: .2s;
   transform: translateY(20px);
   transition: all 0.8s cubic-bezier(0.55, 0.085, 0, 0.99);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
 }
 
 .hero-img-container .xb-text-right .img:not(:last-child) {

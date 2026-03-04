@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-import img14 from "@/public/images/service/img14.jpg";
 import HeaderThree from "@/components/HeaderThree/HeaderThree";
 import PageTitle from "@/components/pagetitle/PageTitle";
 import Footer from "@/components/footer/Footer";
@@ -21,10 +19,6 @@ export default function WhatIsRag() {
 
           <section className="blog_details_section pt-70">
             <div className="container">
-              <div className="single-item-image mb-70">
-                <Image src={img14} alt="What is RAG" />
-              </div>
-
               <div className="blog_details_content">
                 <h3 className="item_details_info_heading mb-35">
                   Beyond the Training Data: What is RAG?

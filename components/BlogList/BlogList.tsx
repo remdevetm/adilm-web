@@ -110,9 +110,6 @@ export default function BlogList() {
                   posts.map((post) => (
                     <div className="blog_details_item xb-border" key={post._id}>
                       <div className="xb-item--inner">
-                        {post.imageUrl && (
-                          <img src={post.imageUrl} alt={post.title} style={{ maxWidth: "100%", marginBottom: 16 }} />
-                        )}
                         <h3 className="xb-item--title border-effect-2">
                           <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                         </h3>

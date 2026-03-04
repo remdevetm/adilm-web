@@ -2,22 +2,25 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Images
-import img14 from "@/public/images/service/img14.jpg";
-import img15 from "@/public/images/service/img15.jpg";
-import img16 from "@/public/images/service/img16.jpg";
+import img14 from "@/public/images/service/img14.webp";
+import img15 from "@/public/images/service/img15.webp";
+import img16 from "@/public/images/service/img16.webp";
 
 const galleryCards = [
   {
     img: img14,
     title: "What is a RAG?",
+    href: "/blog/what-is-rag",
   },
   {
     img: img15,
     title: "What is a RAG as a Service?",
+    href: "/blog/rag-as-a-service",
   },
   {
     img: img16,
     title: "Benefit of RAG as a Service",
+    href: "/blog/benefits-of-rag-as-a-service",
   },
 ];
 
@@ -43,7 +46,6 @@ export default function GallerySection() {
             boxShadow: "var(--eco-shadow-soft)",
           }}
         >
-          {/* Image */}
           <div
             style={{
               borderRadius: "12px",
@@ -57,11 +59,11 @@ export default function GallerySection() {
               src={card.img}
               alt={card.title}
               fill
-              style={{ objectFit: "cover" }}
+              sizes="(max-width: 768px) 100vw, 33vw"
+              style={{ objectFit: "contain" }}
             />
           </div>
 
-          {/* Title */}
           <h3
             style={{
               marginTop: "1.25rem",
@@ -75,15 +77,8 @@ export default function GallerySection() {
             {card.title}
           </h3>
 
-          {/* Read More */}
           <Link
-            href={
-              index === 0
-                ? "/blog/what-is-rag"
-                : index === 1
-                ? "/blog/rag-as-a-service"
-                : "/blog/benefits-of-rag-as-a-service"
-            }
+            href={card.href}
             style={{
               display: "inline-flex",
               alignItems: "center",

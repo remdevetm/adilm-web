@@ -1,10 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import HeaderThree from "@/components/HeaderThree/HeaderThree";
 import PageTitle from "@/components/pagetitle/PageTitle";
 import Footer from "@/components/footer/Footer";
 import Scrollbar from "@/components/scrollbar/scrollbar";
-import img15 from "@/public/images/service/img15.jpg";
 
 export const metadata = {
   title: "What is RAG-as-a-Service (RAGaaS)? | Adilm",
@@ -21,10 +19,6 @@ export default function RagAsAService() {
 
           <section className="blog_details_section pt-70">
             <div className="container">
-              <div className="single-item-image mb-70">
-                <Image src={img15} alt="RAG as a Service" />
-              </div>
-
               <div className="blog_details_content">
                 <h3 className="item_details_info_heading mb-35">
                   What is RAG-as-a-Service (RAGaaS)?

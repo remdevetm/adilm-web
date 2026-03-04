@@ -1,10 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import HeaderThree from "@/components/HeaderThree/HeaderThree";
 import PageTitle from "@/components/pagetitle/PageTitle";
 import Footer from "@/components/footer/Footer";
 import Scrollbar from "@/components/scrollbar/scrollbar";
-import img16 from "@/public/images/service/img16.jpg";
 
 export const metadata = {
   title: "4 Reasons Why Your Business Needs RAG-as-a-Service | Adilm",
@@ -21,10 +19,6 @@ export default function BenefitsOfRag() {
 
           <section className="blog_details_section pt-70">
             <div className="container">
-              <div className="single-item-image mb-70">
-                <Image src={img16} alt="Benefits of RAGaaS" />
-              </div>
-
               <div className="blog_details_content">
                 <h3 className="item_details_info_heading mb-35">
                   4 Reasons Why Your Business Needs RAG-as-a-Service
