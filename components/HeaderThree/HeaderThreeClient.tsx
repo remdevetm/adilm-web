@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-import logo from "@/public/images/logo/logo-two.svg";
+import logo from "@/public/images/logo/logo.svg";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -99,9 +99,10 @@ export default function HeaderThreeClient() {
                     <div className="header__wrap xb-border ul_li_between">
 
                         {/* LOGO */}
-                        <div className="xb-header-logo">
-                            <Link href="/" className="logo1" style={{marginRight: 'auto', marginLeft: -90, paddingLeft: 0}}>
-                                <Image src={logo} alt="Adilm Logo" width={440} height={68} priority />
+                        <div className="xb-header-logo xb-header-logo--adilm">
+                            <Link href="/" className="logo1">
+                                <Image src={logo} alt="" width={38} height={48} priority className="xb-header-logo-img" />
+                                <span className="xb-header-logo-text">ADILM</span>
                             </Link>
                         </div>
 
@@ -244,9 +245,10 @@ export default function HeaderThreeClient() {
 
                                 <div className="xb-menu-close xb-hide-xl xb-close" onClick={closeMenu}></div>
 
-                                <div className="xb-logo-mobile xb-hide-xl">
-                                    <Link href="/" rel="home">
-                                        <Image src={logo} alt="Adilm Logo" />
+                                <div className="xb-logo-mobile xb-hide-xl xb-header-logo--adilm">
+                                    <Link href="/" rel="home" className="logo1">
+                                        <Image src={logo} alt="" width={40} height={40} className="xb-header-logo-img" />
+                                        <span className="xb-header-logo-text">ADILM</span>
                                     </Link>
                                 </div>
 
@@ -254,7 +256,7 @@ export default function HeaderThreeClient() {
                                     <ul className="xb-menu-primary clearfix">
                                         {NAV_ITEMS.map(({ href, label }) => (
                                             <li key={href}>
-                                                <Link href={href}>
+                                                <Link href={href} onClick={closeMenu}>
                                                     <span>
                                                         {label === "Rag as a Service" ? (
                                                             <>Rag <span style={{ textTransform: "lowercase" }}>as a</span> Service</>

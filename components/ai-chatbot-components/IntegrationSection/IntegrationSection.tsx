@@ -81,7 +81,7 @@ export default function IntegrationComparisonSection() {
           <div className="row mt-none-30 align-items-center">
 
             {/* LEFT CONTENT */}
-            <div className="col-lg-6 mt-30" style={{ paddingLeft: "60px" }}>
+            <div className="col-lg-6 mt-30 integration-content-col">
               <div className="integration-content">
                 <div className="sec-title sec-title--two process-title mb-10">
                   <span className="sub-title d-block mb-30">
