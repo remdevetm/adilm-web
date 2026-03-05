@@ -2,8 +2,8 @@ import Link from "next/link";
 import bgImage from "@/public/images/bg/bootcamp-bg.png";
 
 interface PageTitleProps {
-  pageTitle: string;
-  pagesub?: string;
+  pageTitle: React.ReactNode;
+  pagesub?: React.ReactNode;
   disableBgImage?: boolean;
 }
 

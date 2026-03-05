@@ -18,8 +18,8 @@ export default function ServiceSinglePage() {
 
         <main>
           <PageTitle
-            pageTitle="Rag as a Service"
-            pagesub="Rag as a Service"
+            pageTitle={<>Rag <span style={{ textTransform: "lowercase" }}>as a</span> Service</>}
+            pagesub={<>Rag <span style={{ textTransform: "lowercase" }}>as a</span> Service</>}
             disableBgImage
           />
           <ServiceDetails />

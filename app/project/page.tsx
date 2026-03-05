@@ -5,7 +5,7 @@ import Footer from "@/components/footer/Footer";
 import ProjectSection from "./ProjectSection";
 
 export const metadata = {
-  title: "Our AI agents | Adilm – AI Agency & Technology",
+  title: "AI agents | Adilm – AI Agency & Technology",
   description:
     "Explore Adilm's AI agents across chatbot, NLP, vision, marketing, and analytics—built to deliver real business impact.",
 };
@@ -18,8 +18,8 @@ export default function ProjectPage() {
 
         <main>
           <PageTitle
-            pageTitle="Our AI agents"
-            pagesub="Our AI agents"
+            pageTitle="AI agents"
+            pagesub="AI agents"
             disableBgImage
           />
           <ProjectSection />

@@ -125,7 +125,7 @@ export default function ProjectSection() {
     <section className="project bg_img pt-135 pb-150">
       <div className="container">
         <div className="sec-title custom-sec-title xb-sec-padding text-center">
-          <span className="sub-title">Our AI agents</span>
+          <span className="sub-title">AI agents</span>
 
           <h2 className="title">
             <span className="round-img">

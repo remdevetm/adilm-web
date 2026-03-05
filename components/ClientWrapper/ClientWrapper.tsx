@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { ToastContainer } from "react-toastify";
 import Lenis from "lenis";
 
@@ -13,6 +14,13 @@ import WowInit from "@/app/wow-init";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export default function ClientWrapper({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   // Lenis
   useEffect(() => {
     const lenis = new Lenis({ duration: 1.2, smoothWheel: true });

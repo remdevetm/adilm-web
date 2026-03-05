@@ -28,7 +28,7 @@ const menus: MenuItem[] = [
   },
   {
     id: 3,
-    title: "Our AI agents",
+    title: "AI agents",
     link: "/project",
   },
   {

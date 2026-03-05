@@ -69,9 +69,9 @@ export default function Footer() {
         <div className="xb-footer-heading wow zoomIn" data-wow-duration="600ms">
           <h1 className="title">Adilm</h1>
 
-          <a className="mail" href="mailto:John@adilm.ai">
+          <a className="mail" href="mailto:john@adilm.ai">
             <Image src={emailIcon} alt="email" />
-            John@adilm.ai
+            john@adilm.ai
           </a>
         </div>
 

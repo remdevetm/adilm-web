@@ -2,21 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 // --- contact images ---
-import img01 from "@/public/images/contact/img01.png";
-import img02 from "@/public/images/contact/img02.png";
-import img03 from "@/public/images/contact/img03.png";
+import theBankImg from "@/public/images/contact/The-Bank.jpg";
 
 // --- arrow icons ---
 import arrowWhite from "@/public/images/icon/rotate-arrow-white02.svg";
 import arrowBlack from "@/public/images/icon/rotate-arrow-black03.svg";
+import emailIcon from "@/public/images/icon/email-icon.svg";
 
 // ---- contact items data ----
 const contactData = [
   {
     location: "Cnr Tyrwhitt & 24 Cradock Ave, Rosebank, JHB, 2196",
     phone: "+27 67 224 8032",
-    email: "John@adilm.ai",
-    img: img01,
+    email: "john@adilm.ai",
   },
 ];
 
@@ -31,16 +29,16 @@ export default function ContactInfoSection() {
               <div className="xb-contact-items img-hove-effect xb-border">
                 <div className="xb-item--inner">
 
-                  {/* Hover images */}
-                  <div className="xb-img">
-                    {[1, 2, 3, 4].map((i) => (
-                      <Link href="/contact" key={i}>
-                        <Image
-                          src={item.img}
-                          alt={`Office location ${item.location}`}
-                        />
-                      </Link>
-                    ))}
+                  {/* 555×391 hero image – The Bank */}
+                  <div className="xb-img xb-img--contact-hero">
+                    <Image
+                      src={theBankImg}
+                      alt="The Bank Voco – Adilm office location"
+                      width={555}
+                      height={391}
+                      className="contact-hero-img"
+                      sizes="(max-width: 768px) 100vw, 555px"
+                    />
                   </div>
 
                   {/* Content */}
@@ -48,7 +46,14 @@ export default function ContactInfoSection() {
                     <p className="xb-item--location">{item.location}</p>
 
                     <span className="xb-item--contact_info">{item.phone}</span>
-                    <span className="xb-item--contact_info">John@adilm.ai</span>
+
+                    <a
+                      href="mailto:john@adilm.ai"
+                      className="thm-btn form-btn contact-email-btn mt-20"
+                    >
+                      <Image src={emailIcon} alt="" aria-hidden className="contact-email-icon" />
+                      john@adilm.ai
+                    </a>
 
                     <Link href="/contact" className="thm-btn form-btn mt-45">
                       VIEW LOCATION

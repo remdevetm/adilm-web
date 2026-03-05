@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -11,7 +12,16 @@ import logo from "@/public/images/logo/logo-two.svg";
 
 gsap.registerPlugin(ScrollToPlugin);
 
+const NAV_ITEMS = [
+    { href: "/ai-chatbot", label: "AI Chatbot" },
+    { href: "/service-details", label: "Rag as a Service" },
+    { href: "/project", label: "AI agents" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact Us" },
+] as const;
+
 export default function HeaderThreeClient() {
+    const pathname = usePathname();
     const [menuOpen, setMenuOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
@@ -99,35 +109,19 @@ export default function HeaderThreeClient() {
                         <div className="main-menu__wrap navbar navbar-expand-lg p-0">
                             <nav className="main-menu collapse navbar-collapse">
                                 <ul>
-                                    <li className="active">
-                                        <Link href="/ai-chatbot">
-                                            <span>AI Chatbot</span>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link href="/service-details">
-                                            <span>Rag as a Service</span>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link href="/project">
-                                            <span>Our AI agents</span>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link href="/blog">
-                                            <span>Blog</span>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link href="/contact">
-                                            <span>Contact Us</span>
-                                        </Link>
-                                    </li>
+                                    {NAV_ITEMS.map(({ href, label }) => (
+                                        <li key={href} className={pathname === href ? "active" : undefined}>
+                                            <Link href={href}>
+                                                <span>
+                                                    {label === "Rag as a Service" ? (
+                                                        <>Rag <span style={{ textTransform: "lowercase" }}>as a</span> Service</>
+                                                    ) : (
+                                                        label
+                                                    )}
+                                                </span>
+                                            </Link>
+                                        </li>
+                                    ))}
                                 </ul>
                             </nav>
                         </div>
@@ -258,31 +252,19 @@ export default function HeaderThreeClient() {
 
                                 <nav className="xb-header-nav">
                                     <ul className="xb-menu-primary clearfix">
-                                        <li>
-                                            <Link href="/ai-chatbot">
-                                                <span>AI Chatbot</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/service-details">
-                                                <span>Rag as a Service</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/project">
-                                                <span>Our AI agents</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/blog">
-                                                <span>Blog</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/contact">
-                                                <span>Contact Us</span>
-                                            </Link>
-                                        </li>
+                                        {NAV_ITEMS.map(({ href, label }) => (
+                                            <li key={href}>
+                                                <Link href={href}>
+                                                    <span>
+                                                        {label === "Rag as a Service" ? (
+                                                            <>Rag <span style={{ textTransform: "lowercase" }}>as a</span> Service</>
+                                                        ) : (
+                                                            label
+                                                        )}
+                                                    </span>
+                                                </Link>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </nav>
                             </div>

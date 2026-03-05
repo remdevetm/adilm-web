@@ -397,7 +397,7 @@ span {
   --color-default: var(--eco-text-body);
   --color-gray: var(--eco-text-muted);
 
-  background: linear-gradient(to top, rgba(63, 95, 80, 0.12) 0%, rgba(63, 95, 80, 0.07) 35%, rgba(63, 95, 80, 0.03) 65%, #fff 120%), #ffffff;
+  background: #ffffff;
   min-height: 100vh;
   color: var(--eco-text-body);
 }
@@ -657,7 +657,7 @@ span {
 
 .contact-page .header-style--one .main-menu>ul>li.active>a,
 .contact-page .header-style--one .main-menu>ul>li.active>a span {
-  color: var(--eco-primary);
+  color: #0f1408;
 }
 
 .contact-page .header-style--one .main-menu>ul>li:hover>a,
@@ -722,18 +722,78 @@ span {
   background: rgba(255, 255, 255, 0.65);
 }
 
-.contact-page .form-btn {
-  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary)) !important;
+/* Contact page: container a bit smaller */
+.contact-page .xb-contact-items {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contact-page .form-btn .xb-icon img {
+/* Contact page buttons: default light, green on hover with rise + shadow */
+.contact-page .xb-contact-items .form-btn {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(15, 20, 8, 0.12);
+  color: #0f1408 !important;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.contact-page .xb-contact-items .form-btn .xb-icon img {
+  filter: brightness(0);
+}
+.contact-page .xb-contact-items .form-btn:hover {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary)) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(63, 95, 80, 0.28);
+}
+.contact-page .xb-contact-items .form-btn:hover .xb-icon img {
   filter: brightness(0) invert(1);
 }
 
-.contact-page .form-btn:hover {
+/* Contact page email button: same default/hover, lowercase text */
+.contact-page .contact-email-btn,
+.contact-page .xb-contact-items .contact-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  text-transform: none;
+  color: #0f1408 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(15, 20, 8, 0.12);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.contact-page .contact-email-btn .contact-email-icon,
+.contact-page .xb-contact-items .contact-email-btn .contact-email-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  filter: brightness(0);
+  transition: filter 0.25s ease;
+}
+.contact-page .contact-email-btn:hover,
+.contact-page .xb-contact-items .contact-email-btn:hover {
   color: #ffffff !important;
   background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary)) !important;
-  filter: brightness(1.03);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(63, 95, 80, 0.28);
+}
+.contact-page .contact-email-btn:hover .contact-email-icon,
+.contact-page .xb-contact-items .contact-email-btn:hover .contact-email-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Contact page: 555×391 hero image (The Bank) */
+.contact-page .xb-img--contact-hero {
+  overflow: hidden;
+  aspect-ratio: 555 / 391;
+  max-height: 391px;
+  border-radius: 12px;
+}
+.contact-page .xb-img--contact-hero .contact-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Footer */
@@ -822,7 +882,7 @@ span {
 
 .blog-page .header-style--one .main-menu>ul>li.active>a,
 .blog-page .header-style--one .main-menu>ul>li.active>a span {
-  color: var(--eco-primary);
+  color: #0f1408;
 }
 
 .blog-page .header-style--one .main-menu>ul>li:hover>a,
@@ -1001,7 +1061,7 @@ span {
 .project-page .header-style--one .main-menu>ul>li.active>a span,
 .project-details-page .header-style--one .main-menu>ul>li.active>a,
 .project-details-page .header-style--one .main-menu>ul>li.active>a span {
-  color: var(--eco-primary);
+  color: #0f1408;
 }
 
 .project-page .header-style--one .main-menu>ul>li:hover>a,
@@ -1128,7 +1188,7 @@ span {
 
 .ai-chatbot-page .header-style--one .main-menu>ul>li.active>a,
 .ai-chatbot-page .header-style--one .main-menu>ul>li.active>a span {
-  color: var(--eco-primary);
+  color: #0f1408;
 }
 
 .ai-chatbot-page .header-style--one .main-menu>ul>li:hover>a,
@@ -1138,6 +1198,22 @@ span {
 
 .ai-chatbot-page .thm-btn.chatbot-btn {
   background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+}
+
+/* Video section: white border and no green glow/flashes */
+.ai-chatbot-page .xb-video-wrap {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Keep loading bar visible (neutral, not green); animation stays on .nav-link.active::before */
+.ai-chatbot-page .xb-video-nav-item .nav-link::before {
+  background: rgba(15, 20, 8, 0.08);
+}
+.ai-chatbot-page .xb-video-nav-item .nav-link.active::before {
+  opacity: 1;
+  animation: widthScale 3s linear infinite;
 }
 
 .ai-chatbot-page .feature-sec-title .title {
@@ -1307,7 +1383,7 @@ span {
 
 .service-details-page .header-style--one .main-menu>ul>li.active>a,
 .service-details-page .header-style--one .main-menu>ul>li.active>a span {
-  color: var(--eco-primary);
+  color: #0f1408;
 }
 
 .service-details-page .header-style--one .main-menu>ul>li:hover>a,
@@ -5359,9 +5435,10 @@ body[data-aos-easing=ease] [data-aos] {
   color: #0f1408;
 }
 
+/* Nav links black by default; green only on hover (including active item) */
 .header-style--one .main-menu>ul>li.active>a,
 .header-style--one .main-menu>ul>li.active>a span {
-  color: var(--eco-primary);
+  color: #0f1408;
 }
 
 .header-style--one .main-menu>ul>li:hover>a,

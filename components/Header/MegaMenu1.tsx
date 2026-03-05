@@ -47,7 +47,7 @@ export default function MegaMenu1() {
                             <span className="iconbox_icon">
                               <Image src={icon3} alt="AI Agents Icon" />
                             </span>
-                            <small className="iconbox_title">Our AI agents</small>
+                            <small className="iconbox_title">AI agents</small>
                           </span>
                           <span className="description mb-0">
                             Explore our all case studies.
