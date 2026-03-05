@@ -7,7 +7,7 @@ import heroImg from "@/public/images/hero/hero-img01.png";
 import glassyEffectImg from "@/public/images/hero/glassy-effect-img.png";
 import textImg01 from "@/public/images/hero/text-img01.png";
 import textImg02 from "@/public/images/hero/text-img02.png";
-import textImg03 from "@/public/images/hero/text-img03.png";
+import agentCardImg from "@/public/images/logo/Agent card.webp";
 import textImg04 from "@/public/images/hero/text-img04.png";
 import textImg05 from "@/public/images/hero/text-img05.png";
 
@@ -124,7 +124,7 @@ export default function HeroSection() {
 
               {/* Right chatbot messages */}
               <div className="xb-text-right animated">
-                <Image className="img" src={textImg03} alt="Aivora agent" />
+                <Image className="img img--agent-card" src={agentCardImg} alt="Aivora agent" />
                 <Image className="img img--2" src={textImg04} alt="Chat message" />
                 <Image className="img img--3" src={textImg05} alt="Typing indicator" />
               </div>

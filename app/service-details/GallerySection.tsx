@@ -40,7 +40,7 @@ export default function GallerySection() {
           style={{
             background: "var(--eco-bg-alt)",
             borderRadius: "16px",
-            padding: "1.25rem",
+            padding: "1rem 0.6rem",
             display: "flex",
             flexDirection: "column",
             boxShadow: "var(--eco-shadow-soft)",
@@ -48,20 +48,36 @@ export default function GallerySection() {
         >
           <div
             style={{
-              borderRadius: "12px",
+              borderRadius: "14px",
               overflow: "hidden",
               position: "relative",
               width: "100%",
               aspectRatio: "4 / 3",
+              padding: "6px",
+              boxSizing: "border-box",
             }}
           >
-            <Image
-              src={card.img}
-              alt={card.title}
-              fill
-              sizes="(max-width: 768px) 100vw, 33vw"
-              style={{ objectFit: "contain" }}
-            />
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "100%",
+                borderRadius: "12px",
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={card.img}
+                alt={card.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  borderRadius: "12px",
+                }}
+              />
+            </div>
           </div>
 
           <h3

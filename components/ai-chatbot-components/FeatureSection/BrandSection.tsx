@@ -8,34 +8,20 @@ import subLeftIcon from "@/public/images/icon/sub-left-icon.png";
 import subRightIcon from "@/public/images/icon/sub-right-icon.png";
 
 // Brand Logos
-import brandLogo1 from "@/public/images/brand/logo01.png";
-import brandLogo2 from "@/public/images/brand/logo02.png";
-import brandLogo3 from "@/public/images/brand/logo03.png";
-import brandLogo4 from "@/public/images/brand/logo04.png";
-import brandLogo5 from "@/public/images/brand/logo05.png";
-import brandLogo6 from "@/public/images/brand/logo06.png";
-import brandLogo7 from "@/public/images/brand/logo07.png";
-import brandLogo8 from "@/public/images/brand/logo08.png";
-import brandLogo9 from "@/public/images/brand/logo09.png";
-import brandLogo10 from "@/public/images/brand/logo10.png";
-import brandLogo11 from "@/public/images/brand/logo11.png";
-
-/* ================================
-   Static Brand Logos
-================================= */
+import amazonLogo from "@/public/images/logo/amazon.webp";
+import discoveryLogo from "@/public/images/logo/discovery.webp";
+import logo07 from "@/public/images/logo/logo07.webp";
+import sanlamLogo from "@/public/images/logo/sanlam.webp";
+import standardBankLogo from "@/public/images/logo/standard-bank.webp";
+import vodacomLogo from "@/public/images/brand/logo03.png";
 
 const BRAND_LOGOS = [
-  brandLogo1,
-  brandLogo2,
-  brandLogo3,
-  brandLogo4,
-  brandLogo5,
-  brandLogo6,
-  brandLogo7,
-  brandLogo8,
-  brandLogo9,
-  brandLogo10,
-  brandLogo11,
+  { src: amazonLogo, alt: "Amazon", large: true },
+  { src: discoveryLogo, alt: "Discovery" },
+  { src: logo07, alt: "Partner" },
+  { src: sanlamLogo, alt: "Sanlam" },
+  { src: standardBankLogo, alt: "Standard Bank", large: true },
+  { src: vodacomLogo, alt: "Vodacom", large: true },
 ];
 
 /* ================================ */
@@ -61,14 +47,17 @@ export default function BrandSection() {
         className="brand-marquee ac-brand-marquee marquee-left"
       >
         <div className="ac-brand-inner ul_li_between">
-          {BRAND_LOGOS.map((logo, i) => (
-            <div className="xb-brand-item" key={i}>
+          {BRAND_LOGOS.map((item, i) => (
+            <div className={`xb-brand-item${item.large ? " xb-brand-item--large" : ""}`} key={i}>
               <Image
-                src={logo}
-                alt={`brand-${i + 1}`}
-                width={120}
-                height={50}
-                priority={i < 4}
+                src={item.src}
+                alt={item.alt}
+                width={item.large ? 180 : 140}
+                height={item.large ? 72 : 56}
+                priority={i < 3}
+                unoptimized
+                style={{ objectFit: "contain", width: "100%", height: "100%" }}
+                sizes="140px"
               />
             </div>
           ))}

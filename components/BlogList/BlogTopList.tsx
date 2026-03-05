@@ -10,10 +10,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // IMAGES
-import blog1 from "@/public/images/blog/img04.jpg";
-import blog2 from "@/public/images/blog/img4.2.jpg";
-import blog3 from "@/public/images/blog/img4.3.jpg";
-import blog4 from "@/public/images/blog/img4.4.jpg";
+import blog1 from "@/public/images/blog/Blog post 1.png";
+import blog2 from "@/public/images/blog/Blog post 2.png";
+import blog3 from "@/public/images/blog/Blog post 3.png";
+import blog4 from "@/public/images/blog/Blog post 4.png";
 
 import shapeLeft from "@/public/images/shape/prev-shape.png";
 import shapeRight from "@/public/images/shape/next-shape.png";
@@ -72,11 +72,14 @@ export default function BlogSlider() {
                 <div className="blog-slide-item">
 
                   {/* IMAGE */}
-                  <div className="xb-item--img">
+                  <div className="xb-item--img blog-slide-img-wrap">
                     <Image
                       src={item.img}
                       alt={item.title}
+                      fill
+                      sizes="(max-width: 1290px) 100vw, 1290px"
                       priority={index === 0}
+                      className="blog-slide-img"
                     />
                   </div>
 

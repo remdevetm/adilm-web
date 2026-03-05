@@ -7055,6 +7055,43 @@ Drop Down menu end
   opacity: 1;
 }
 
+/* All marquee logos: same size, visible, aligned (no filter – show original colors to avoid white boxes) */
+.ac-brand-marquee .ac-brand-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.ac-brand-marquee .xb-brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 140px;
+  height: 56px;
+  opacity: 1;
+}
+.ac-brand-marquee .xb-brand-item:hover {
+  opacity: 0.85;
+}
+.ac-brand-marquee .xb-brand-item img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 140px;
+  max-height: 56px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.ac-brand-marquee .xb-brand-item--large {
+  width: 180px;
+  height: 72px;
+}
+.ac-brand-marquee .xb-brand-item--large img {
+  max-width: 180px;
+  max-height: 72px;
+}
+
 .brand-sec-title .sub-title span {
   color: var(--color-primary);
 }
@@ -12111,20 +12148,31 @@ Drop Down menu end
   }
 }
 
-.blog-slide-item .xb-item--img img {
+/* Blog slide image container: 1290×600 */
+.blog-slide-item .xb-item--img.blog-slide-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  max-width: 1290px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-slide-item .xb-item--img img,
+.blog-slide-item .xb-item--img .blog-slide-img {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 767px) {
-  .blog-slide-item .xb-item--img {
+  .blog-slide-item .xb-item--img.blog-slide-img-wrap {
     height: 600px;
-  }
-
-  .blog-slide-item .xb-item--img img {
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
   }
 }
 
@@ -17337,6 +17385,15 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
   transition: all 0.8s cubic-bezier(0.55, 0.085, 0, 0.99);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06);
   border-radius: 12px;
+}
+
+.hero-img-container .xb-text-right .img--agent-card {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 .hero-img-container .xb-text-right .img:not(:last-child) {
